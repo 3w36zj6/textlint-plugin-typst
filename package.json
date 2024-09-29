@@ -24,7 +24,8 @@
 	},
 	"dependencies": {
 		"@myriaddreamin/typst-ts-web-compiler": "^0.5.0-rc7",
-		"@myriaddreamin/typst.ts": "^0.5.0-rc7"
+		"@myriaddreamin/typst.ts": "^0.5.0-rc7",
+		"yaml": "^2.5.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.2",
