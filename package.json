@@ -1,0 +1,43 @@
+{
+	"name": "textlint-plugin-typst",
+	"version": "0.0.1",
+	"description": "textlint plugin to lint Typst",
+	"keywords": ["textlint", "textlintplugin", "plugin", "lint", "typst"],
+	"repository": "https://github.com/3w36zj6/textlint-plugin-typst",
+	"funding": {
+		"type": "github",
+		"url": "https://github.com/sponsors/3w36zj6"
+	},
+	"license": "MIT",
+	"author": "3w36zj6",
+	"main": "lib/index.js",
+	"files": ["lib"],
+	"scripts": {
+		"build": "esbuild --bundle src/*.ts --outdir=lib --platform=node",
+		"clean": "rm -frv lib",
+		"format:write": "biome format --write .",
+		"format": "biome format .",
+		"lint": "biome lint .",
+		"lint:apply": "biome lint --apply .",
+		"check": "biome check .",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@myriaddreamin/typst-ts-web-compiler": "^0.5.0-rc7",
+		"@myriaddreamin/typst.ts": "^0.5.0-rc7"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.2",
+		"@textlint/ast-node-types": "^14.0.4",
+		"@textlint/ast-tester": "^14.0.4",
+		"@textlint/types": "^14.0.4",
+		"@types/node": "^20.12.2",
+		"bun-types": "latest",
+		"esbuild": "^0.20.2",
+		"textlint-scripts": "^14.0.4",
+		"textlint-tester": "^14.0.4",
+		"tsc": "^2.0.4",
+		"typescript": "^5.4.3",
+		"vitest": "^1.4.0"
+	}
+}
