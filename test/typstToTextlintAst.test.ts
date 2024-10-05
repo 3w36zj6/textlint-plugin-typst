@@ -1,6 +1,7 @@
-import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
+import * as ASTTester from "@textlint/ast-tester";
+import { describe, expect, it } from "vitest";
 import {
 	convertRawTypstAstObjectToTextlintAstObject,
 	convertRawTypstAstStringToObject,
@@ -8,7 +9,6 @@ import {
 	extractRawSourceByLocation,
 	getRawTypstAstString,
 } from "../src/typstToTextlintAst";
-import * as ASTTester from "@textlint/ast-tester";
 
 const typstSource = fs.readFileSync(
 	path.join(__dirname, "example.typ"),
