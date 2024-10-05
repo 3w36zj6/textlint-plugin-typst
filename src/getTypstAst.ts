@@ -1,4 +1,13 @@
 import { createTypstCompiler } from "@myriaddreamin/typst.ts/dist/esm/compiler.mjs";
+import {
+	ASTNodeTypes,
+	type TxtDocumentNode,
+	type TxtNode,
+	type TxtNodePosition,
+	type TxtParentNode,
+	type TxtTextNode,
+} from "@textlint/ast-node-types";
+import type { Content } from "@textlint/ast-node-types/lib/src/NodeType";
 import { parse } from "yaml";
 
 /**
@@ -45,5 +54,203 @@ export const convertRawTypstAstStringToObject = (rawTypstAstString: string) => {
 	);
 
 	const parsed = parse(escapedRawTypstAstYamlString);
-	return parsed.ast;
+	return parsed.ast as TypstAstNode;
+};
+
+/**
+ * Convert a Typst AST node type to a textlint AST node type.
+ * @param typstAstNodeType The Typst AST node type.
+ * @returns The textlint AST node type.
+ **/
+export const convertTypstAstNodeTypeToTextlintNodeType = (
+	typstAstNodeType: string,
+): string => {
+	// TODO: Add more mappings
+	const nodeTypeMap: { [key: string]: string } = {
+		"Marked::Heading": ASTNodeTypes.Header,
+		"Marked::Text": ASTNodeTypes.Str,
+	};
+	return typstAstNodeType in nodeTypeMap
+		? nodeTypeMap[typstAstNodeType]
+		: typstAstNodeType;
+};
+
+interface TypstAstNode {
+	s: string;
+	c?: TypstAstNode[];
+}
+
+// Temporary AST node interface for converting Typst AST to textlint AST
+interface AstNode {
+	// Typst AST node properties
+	s: string;
+	c?: AstNode[];
+
+	// textlint AST node properties
+	type: string; //TxtNode["type"];
+	raw: TxtNode["raw"];
+	range: TxtNode["range"];
+	loc: TxtNode["loc"];
+	//parent?: TxtNode["parent"];
+
+	value?: TxtTextNode["value"]; // If the node is a TxtTextNode
+	children?: TxtParentNode["children"]; // If the node is a TxtParentNode
+}
+
+type TxtNodeLineLocation = TxtNode["loc"];
+
+/**
+ * Extract the raw source code from the specified location.
+ * @param typstSource The raw Typst source code.
+ * @param location The location specifying the start and end positions.
+ * @returns The extracted source code.
+ */
+export const extractRawSourceByLocation = (
+	typstSource: string,
+	location: TxtNodeLineLocation,
+): string => {
+	const { start, end } = location;
+	const lines = typstSource.split("\n");
+
+	// NOTE: Line numbers are 1-based, but array indexes are 0-based.
+	const targetLines = lines.slice(start.line - 1, end.line);
+
+	const targetLinesFirst = targetLines[0].slice(start.column);
+	const targetLinesMiddle = targetLines.slice(1, -1);
+	const targetLinesLast = targetLines[targetLines.length - 1].slice(
+		0,
+		end.column,
+	);
+	let result: string;
+	if (start.line === end.line) {
+		result = targetLinesFirst.slice(0, end.column - start.column);
+	} else {
+		result = targetLinesFirst;
+		if (targetLinesMiddle.length > 0) {
+			result += `\n${targetLinesMiddle.join("\n")}`;
+		}
+		result += `\n${targetLinesLast}`;
+	}
+
+	return result;
+};
+
+/**
+ * Convert a raw Typst AST object to a textlint AST object.
+ * @param rawTypstAstObject The raw Typst AST object.
+ * @returns The textlint AST object.
+ **/
+export const convertRawTypstAstObjectToTextlintAstObject = (
+	rawTypstAstObject: TypstAstNode,
+	typstSource: string,
+) => {
+	// Copy from rawTypstAstObject to textlintAstObject
+	const textlintAstObject: AstNode = JSON.parse(
+		JSON.stringify(rawTypstAstObject),
+	);
+
+	const parsePosition = (position: string): TxtNodePosition => {
+		const [line, column] = position.split(":").map(Number);
+		return {
+			line,
+			column,
+		};
+	};
+
+	const extractNodeType = (s: string): string => {
+		const match = s.match(
+			/(?:<span style='color:[^']+'>([^<]+)<\/span>|([^<]+))/,
+		);
+		if (!match) throw new Error("Invalid format");
+		return match[1] || match[2];
+	};
+
+	const extractLocation = (s: string, c?: AstNode[]): TxtNodeLineLocation => {
+		const match = s.match(/&lt;(\d+:\d+)~(\d+:\d+)&gt;/);
+		if (!match) {
+			if (c !== undefined) {
+				// If root node
+				const rootChildrenStartLocation = extractLocation(c[0].s, c[0].c);
+				const rootChildrenEndLocation = extractLocation(
+					c[c.length - 1].s,
+					c[c.length - 1].c,
+				);
+				return {
+					start: rootChildrenStartLocation.start,
+					end: rootChildrenEndLocation.end,
+				};
+			}
+			throw new Error("Invalid format");
+		}
+
+		const startLocation = parsePosition(match[1]);
+		const endLocation = parsePosition(match[2]);
+
+		return {
+			start: startLocation,
+			end: endLocation,
+		};
+	};
+
+	const calculateOffsets = (node: AstNode, currentOffset = 0): number => {
+		const startOffset = currentOffset;
+
+		const location = extractLocation(node.s, node.c);
+		const nodeRawText = extractRawSourceByLocation(typstSource, location);
+		const nodeLength = nodeRawText.length;
+
+		if (node.c && node.c.length > 0) {
+			// If TxtParentNode
+			let childOffset = startOffset;
+			for (const child of node.c) {
+				childOffset = calculateOffsets(child, childOffset);
+			}
+
+			node.children = node.c as Content[];
+		} else {
+			// If TxtTextNode
+			node.value = extractRawSourceByLocation(typstSource, location);
+		}
+
+		const endOffset = currentOffset + nodeLength;
+
+		node.type = convertTypstAstNodeTypeToTextlintNodeType(
+			extractNodeType(node.s),
+		);
+		node.raw = extractRawSourceByLocation(typstSource, location);
+		node.range = [startOffset, endOffset];
+		node.loc = location;
+
+		// @ts-expect-error
+		// biome-ignore lint/performance/noDelete: Typst AST object requires 's' property but textlint AST object does not.
+		delete node.s;
+		// biome-ignore lint/performance/noDelete: Typst AST object requires 'c' property but textlint AST object does not.
+		delete node.c;
+
+		return endOffset;
+	};
+
+	calculateOffsets(textlintAstObject);
+
+	// Root node is always `Document` node
+	textlintAstObject.type = ASTNodeTypes.Document;
+
+	return textlintAstObject as TxtDocumentNode;
+};
+
+/**
+ * Convert a Typst source code to a textlint AST object.
+ * @param typstSource The Typst source code.
+ * @returns The textlint AST object.
+ */
+export const convertTypstSourceToTextlintAstObject = async (
+	typstSource: string,
+) => {
+	const rawTypstAstString = await getRawTypstAstString(typstSource);
+	const rawTypstAstObject = convertRawTypstAstStringToObject(rawTypstAstString);
+	const textlintAstObject = convertRawTypstAstObjectToTextlintAstObject(
+		rawTypstAstObject,
+		typstSource,
+	);
+	return textlintAstObject as TxtDocumentNode;
 };

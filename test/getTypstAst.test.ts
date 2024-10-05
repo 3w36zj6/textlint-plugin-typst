@@ -1,9 +1,14 @@
 import { describe, it, expect } from "vitest";
-
+import fs from "node:fs";
+import path from "node:path";
 import {
+	convertRawTypstAstObjectToTextlintAstObject,
 	convertRawTypstAstStringToObject,
+	convertTypstSourceToTextlintAstObject,
+	extractRawSourceByLocation,
 	getRawTypstAstString,
 } from "../src/getTypstAst";
+import * as ASTTester from "@textlint/ast-tester";
 
 const typstSource = `#set page(width: 10cm, height: auto)
 #set heading(numbering: "1.")
@@ -1357,6 +1362,10 @@ const rawTypstAstObject = {
 	],
 };
 
+const textlintAstObject = JSON.parse(
+	fs.readFileSync(path.join(__dirname, "textlintAstObject.json"), "utf-8"),
+);
+
 describe("getRawTypstAstString", () => {
 	it("should return raw typst ast string", async () => {
 		const actualRawTypstAstString = await getRawTypstAstString(typstSource);
@@ -1369,5 +1378,53 @@ describe("convertRawTypstAstStringToObject", () => {
 		const actualRawTypstAstObject =
 			await convertRawTypstAstStringToObject(rawTypstAstString);
 		expect(actualRawTypstAstObject).toStrictEqual(rawTypstAstObject);
+	});
+});
+
+describe("extractRawSourceByLocation", () => {
+	it("should extract substring from a single line", async () => {
+		const location = {
+			start: { line: 1, column: 3 },
+			end: { line: 1, column: 8 },
+		};
+		const actualRawSource = await extractRawSourceByLocation(
+			typstSource,
+			location,
+		);
+		expect(actualRawSource).toStrictEqual("t pag");
+	});
+
+	it("should extract substring across multiple lines", async () => {
+		const location = {
+			start: { line: 1, column: 2 },
+			end: { line: 2, column: 12 },
+		};
+		const actualRawSource = await extractRawSourceByLocation(
+			typstSource,
+			location,
+		);
+		expect(actualRawSource).toStrictEqual(`et page(width: 10cm, height: auto)
+#set heading`);
+	});
+});
+
+describe("convertRawTypstAstObjectToTextlintAstObject", () => {
+	it("should convert raw Typst AST object to textlint AST object", async () => {
+		const actualTextlintAstObject =
+			await convertRawTypstAstObjectToTextlintAstObject(
+				rawTypstAstObject,
+				typstSource,
+			);
+		expect(actualTextlintAstObject).toStrictEqual(textlintAstObject);
+		ASTTester.test(actualTextlintAstObject);
+	});
+});
+
+describe("convertTypstSourceToTextlintAstObject", () => {
+	it("should convert Typst source to textlint AST object", async () => {
+		const actualTextlintAstObject =
+			await convertTypstSourceToTextlintAstObject(typstSource);
+		expect(actualTextlintAstObject).toStrictEqual(textlintAstObject);
+		ASTTester.test(actualTextlintAstObject);
 	});
 });
