@@ -7,7 +7,7 @@ import {
 	convertTypstSourceToTextlintAstObject,
 	extractRawSourceByLocation,
 	getRawTypstAstString,
-} from "../src/getTypstAst";
+} from "../src/typstToTextlintAst";
 import * as ASTTester from "@textlint/ast-tester";
 
 const typstSource = `#set page(width: 10cm, height: auto)
