@@ -20,6 +20,7 @@
 		"lint": "biome lint .",
 		"lint:apply": "biome lint --apply .",
 		"check": "biome check .",
+		"check:write": "biome check --write .",
 		"test": "vitest"
 	},
 	"dependencies": {
