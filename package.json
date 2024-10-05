@@ -13,7 +13,7 @@
 	"main": "lib/index.js",
 	"files": ["lib"],
 	"scripts": {
-		"build": "esbuild --bundle src/*.ts --outdir=lib --platform=node",
+		"build": "esbuild --bundle src/index.ts --outdir=lib --platform=node --external:@myriaddreamin/typst-ts-web-compiler",
 		"clean": "rm -frv lib",
 		"format:write": "biome format --write .",
 		"format": "biome format .",
