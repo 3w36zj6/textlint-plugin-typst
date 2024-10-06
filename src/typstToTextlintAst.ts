@@ -40,12 +40,24 @@ export const convertRawTypstAstStringToObject = (rawTypstAstString: string) => {
 	const escapeYamlValues = (yamlString: string): string => {
 		return yamlString
 			.split("\n")
-			.map((line) => {
+			.reduce<string[]>((acc, line) => {
+				// NOTE: If the line does not match the pattern, it is considered a continuation of the previous value.
+				if (!/^\s*(path:|ast:|- s: |s: |c:)/.test(line)) {
+					if (acc.length > 0) {
+						acc[acc.length - 1] =
+							`${acc[acc.length - 1].slice(0, -1)}\\n${line}"`;
+					}
+					return acc;
+				}
 				const [key, ...rest] = line.split(":");
-				if (rest[0] === "") return line;
+				if (rest[0] === "") {
+					acc.push(line);
+					return acc;
+				}
 				const value = rest.join(":").trim();
-				return `${key}: "${value}"`;
-			})
+				acc.push(`${key}: "${value}"`);
+				return acc;
+			}, [])
 			.join("\n");
 	};
 
