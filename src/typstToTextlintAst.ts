@@ -69,6 +69,7 @@ export const convertTypstAstNodeTypeToTextlintNodeType = (
 	const nodeTypeMap: { [key: string]: string } = {
 		"Marked::Heading": ASTNodeTypes.Header,
 		"Marked::Text": ASTNodeTypes.Str,
+		"Marked::Parbreak": ASTNodeTypes.Break,
 	};
 	return typstAstNodeType in nodeTypeMap
 		? nodeTypeMap[typstAstNodeType]
@@ -202,10 +203,50 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 		if (node.c && node.c.length > 0) {
 			// If TxtParentNode
 			let childOffset = startOffset;
-			for (const child of node.c) {
+			const softBreakNodes: TxtTextNode[] = [];
+			for (
+				let nodeChildIndex = 0;
+				nodeChildIndex < node.c.length;
+				nodeChildIndex++
+			) {
+				const child = node.c[nodeChildIndex];
 				childOffset = calculateOffsets(child, childOffset);
+
+				if (nodeChildIndex < node.c.length - 1) {
+					const nextChild = node.c[nodeChildIndex + 1];
+
+					const currentEndLine = child.loc.end.line;
+					const currentEndColumn = child.loc.end.column;
+					const nextStartLine = extractLocation(nextChild.s, nextChild.c).start
+						.line;
+					const nextStartColumn = extractLocation(nextChild.s, nextChild.c)
+						.start.column;
+
+					if (
+						currentEndLine !== nextStartLine &&
+						child.type !== ASTNodeTypes.Break &&
+						nextChild.type !== ASTNodeTypes.Break
+					) {
+						const breakNode: TxtTextNode = {
+							type: "Str",
+							raw: "\n",
+							value: "\n",
+							range: [childOffset, childOffset + 1],
+							loc: {
+								start: { line: currentEndLine, column: currentEndColumn },
+								end: { line: nextStartLine, column: nextStartColumn },
+							},
+						};
+						softBreakNodes.push(breakNode);
+						childOffset += 1;
+					}
+				}
 			}
 
+			node.c = node.c
+				// @ts-expect-error
+				.concat(softBreakNodes)
+				.sort((a, b) => a.range[0] - b.range[0]);
 			node.children = node.c as Content[];
 		} else {
 			// If TxtTextNode
