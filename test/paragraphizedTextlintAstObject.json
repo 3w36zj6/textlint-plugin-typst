@@ -1,174 +1,96 @@
 {
 	"children": [
 		{
+			"value": "#",
+			"type": "Kw::Hash",
+			"raw": "#",
+			"range": [0, 1],
 			"loc": {
 				"start": {
 					"line": 1,
 					"column": 0
 				},
 				"end": {
-					"line": 2,
-					"column": 29
+					"line": 1,
+					"column": 1
 				}
-			},
-			"range": [0, 66],
-			"raw": "#set page(width: 10cm, height: auto)\n#set heading(numbering: \"1.\")",
-			"type": "Paragraph",
+			}
+		},
+		{
 			"children": [
 				{
-					"value": "#",
-					"type": "Kw::Hash",
-					"raw": "#",
-					"range": [0, 1],
+					"value": "set",
+					"type": "Kw::Set",
+					"raw": "set",
+					"range": [1, 4],
 					"loc": {
 						"start": {
 							"line": 1,
-							"column": 0
+							"column": 1
 						},
 						"end": {
 							"line": 1,
-							"column": 1
+							"column": 4
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [4, 5],
+					"loc": {
+						"start": {
+							"line": 1,
+							"column": 4
+						},
+						"end": {
+							"line": 1,
+							"column": 5
+						}
+					}
+				},
+				{
+					"value": "page",
+					"type": "Fn::(Ident: &quot;page&quot;)",
+					"raw": "page",
+					"range": [5, 9],
+					"loc": {
+						"start": {
+							"line": 1,
+							"column": 5
+						},
+						"end": {
+							"line": 1,
+							"column": 9
 						}
 					}
 				},
 				{
 					"children": [
 						{
-							"value": "set",
-							"type": "Kw::Set",
-							"raw": "set",
-							"range": [1, 4],
+							"value": "(",
+							"type": "Punc::LeftParen",
+							"raw": "(",
+							"range": [9, 10],
 							"loc": {
 								"start": {
-									"line": 1,
-									"column": 1
-								},
-								"end": {
-									"line": 1,
-									"column": 4
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [4, 5],
-							"loc": {
-								"start": {
-									"line": 1,
-									"column": 4
-								},
-								"end": {
-									"line": 1,
-									"column": 5
-								}
-							}
-						},
-						{
-							"value": "page",
-							"type": "Fn::(Ident: &quot;page&quot;)",
-							"raw": "page",
-							"range": [5, 9],
-							"loc": {
-								"start": {
-									"line": 1,
-									"column": 5
-								},
-								"end": {
 									"line": 1,
 									"column": 9
+								},
+								"end": {
+									"line": 1,
+									"column": 10
 								}
 							}
 						},
 						{
 							"children": [
 								{
-									"value": "(",
-									"type": "Punc::LeftParen",
-									"raw": "(",
-									"range": [9, 10],
-									"loc": {
-										"start": {
-											"line": 1,
-											"column": 9
-										},
-										"end": {
-											"line": 1,
-											"column": 10
-										}
-									}
-								},
-								{
-									"children": [
-										{
-											"value": "width",
-											"type": "Marked::(Ident: &quot;width&quot;)",
-											"raw": "width",
-											"range": [10, 15],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 10
-												},
-												"end": {
-													"line": 1,
-													"column": 15
-												}
-											}
-										},
-										{
-											"value": ":",
-											"type": "Punc::Colon",
-											"raw": ":",
-											"range": [15, 16],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 15
-												},
-												"end": {
-													"line": 1,
-													"column": 16
-												}
-											}
-										},
-										{
-											"type": "Str",
-											"raw": " ",
-											"value": " ",
-											"range": [16, 17],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 16
-												},
-												"end": {
-													"line": 1,
-													"column": 17
-												}
-											}
-										},
-										{
-											"value": "10cm",
-											"type": "Num(Numeric, 10Cm)",
-											"raw": "10cm",
-											"range": [17, 21],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 17
-												},
-												"end": {
-													"line": 1,
-													"column": 21
-												}
-											}
-										}
-									],
-									"type": "Marked::Named",
-									"raw": "width: 10cm",
-									"range": [10, 21],
+									"value": "width",
+									"type": "Marked::(Ident: &quot;width&quot;)",
+									"raw": "width",
+									"range": [10, 15],
 									"loc": {
 										"start": {
 											"line": 1,
@@ -176,23 +98,23 @@
 										},
 										"end": {
 											"line": 1,
-											"column": 21
+											"column": 15
 										}
 									}
 								},
 								{
-									"value": ",",
-									"type": "Punc::Comma",
-									"raw": ",",
-									"range": [21, 22],
+									"value": ":",
+									"type": "Punc::Colon",
+									"raw": ":",
+									"range": [15, 16],
 									"loc": {
 										"start": {
 											"line": 1,
-											"column": 21
+											"column": 15
 										},
 										"end": {
 											"line": 1,
-											"column": 22
+											"column": 16
 										}
 									}
 								},
@@ -200,123 +122,171 @@
 									"type": "Str",
 									"raw": " ",
 									"value": " ",
-									"range": [22, 23],
+									"range": [16, 17],
 									"loc": {
 										"start": {
 											"line": 1,
-											"column": 22
+											"column": 16
 										},
 										"end": {
 											"line": 1,
-											"column": 23
+											"column": 17
 										}
 									}
 								},
 								{
-									"children": [
-										{
-											"value": "height",
-											"type": "Marked::(Ident: &quot;height&quot;)",
-											"raw": "height",
-											"range": [23, 29],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 23
-												},
-												"end": {
-													"line": 1,
-													"column": 29
-												}
-											}
-										},
-										{
-											"value": ":",
-											"type": "Punc::Colon",
-											"raw": ":",
-											"range": [29, 30],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 29
-												},
-												"end": {
-													"line": 1,
-													"column": 30
-												}
-											}
-										},
-										{
-											"type": "Str",
-											"raw": " ",
-											"value": " ",
-											"range": [30, 31],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 30
-												},
-												"end": {
-													"line": 1,
-													"column": 31
-												}
-											}
-										},
-										{
-											"value": "auto",
-											"type": "Kw::Auto",
-											"raw": "auto",
-											"range": [31, 35],
-											"loc": {
-												"start": {
-													"line": 1,
-													"column": 31
-												},
-												"end": {
-													"line": 1,
-													"column": 35
-												}
-											}
-										}
-									],
-									"type": "Marked::Named",
-									"raw": "height: auto",
-									"range": [23, 35],
+									"value": "10cm",
+									"type": "Num(Numeric, 10Cm)",
+									"raw": "10cm",
+									"range": [17, 21],
 									"loc": {
 										"start": {
 											"line": 1,
-											"column": 23
+											"column": 17
 										},
 										"end": {
 											"line": 1,
-											"column": 35
-										}
-									}
-								},
-								{
-									"value": ")",
-									"type": "Punc::RightParen",
-									"raw": ")",
-									"range": [35, 36],
-									"loc": {
-										"start": {
-											"line": 1,
-											"column": 35
-										},
-										"end": {
-											"line": 1,
-											"column": 36
+											"column": 21
 										}
 									}
 								}
 							],
-							"type": "Marked::Args",
-							"raw": "(width: 10cm, height: auto)",
-							"range": [9, 36],
+							"type": "Marked::Named",
+							"raw": "width: 10cm",
+							"range": [10, 21],
 							"loc": {
 								"start": {
 									"line": 1,
-									"column": 9
+									"column": 10
+								},
+								"end": {
+									"line": 1,
+									"column": 21
+								}
+							}
+						},
+						{
+							"value": ",",
+							"type": "Punc::Comma",
+							"raw": ",",
+							"range": [21, 22],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 21
+								},
+								"end": {
+									"line": 1,
+									"column": 22
+								}
+							}
+						},
+						{
+							"type": "Str",
+							"raw": " ",
+							"value": " ",
+							"range": [22, 23],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 22
+								},
+								"end": {
+									"line": 1,
+									"column": 23
+								}
+							}
+						},
+						{
+							"children": [
+								{
+									"value": "height",
+									"type": "Marked::(Ident: &quot;height&quot;)",
+									"raw": "height",
+									"range": [23, 29],
+									"loc": {
+										"start": {
+											"line": 1,
+											"column": 23
+										},
+										"end": {
+											"line": 1,
+											"column": 29
+										}
+									}
+								},
+								{
+									"value": ":",
+									"type": "Punc::Colon",
+									"raw": ":",
+									"range": [29, 30],
+									"loc": {
+										"start": {
+											"line": 1,
+											"column": 29
+										},
+										"end": {
+											"line": 1,
+											"column": 30
+										}
+									}
+								},
+								{
+									"type": "Str",
+									"raw": " ",
+									"value": " ",
+									"range": [30, 31],
+									"loc": {
+										"start": {
+											"line": 1,
+											"column": 30
+										},
+										"end": {
+											"line": 1,
+											"column": 31
+										}
+									}
+								},
+								{
+									"value": "auto",
+									"type": "Kw::Auto",
+									"raw": "auto",
+									"range": [31, 35],
+									"loc": {
+										"start": {
+											"line": 1,
+											"column": 31
+										},
+										"end": {
+											"line": 1,
+											"column": 35
+										}
+									}
+								}
+							],
+							"type": "Marked::Named",
+							"raw": "height: auto",
+							"range": [23, 35],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 23
+								},
+								"end": {
+									"line": 1,
+									"column": 35
+								}
+							}
+						},
+						{
+							"value": ")",
+							"type": "Punc::RightParen",
+							"raw": ")",
+							"range": [35, 36],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 35
 								},
 								"end": {
 									"line": 1,
@@ -325,190 +295,142 @@
 							}
 						}
 					],
-					"type": "Marked::SetRule",
-					"raw": "set page(width: 10cm, height: auto)",
-					"range": [1, 36],
+					"type": "Marked::Args",
+					"raw": "(width: 10cm, height: auto)",
+					"range": [9, 36],
 					"loc": {
 						"start": {
 							"line": 1,
-							"column": 1
+							"column": 9
 						},
 						"end": {
 							"line": 1,
 							"column": 36
+						}
+					}
+				}
+			],
+			"type": "Marked::SetRule",
+			"raw": "set page(width: 10cm, height: auto)",
+			"range": [1, 36],
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 1
+				},
+				"end": {
+					"line": 1,
+					"column": 36
+				}
+			}
+		},
+		{
+			"type": "Str",
+			"raw": "\n",
+			"value": "\n",
+			"range": [36, 37],
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 36
+				},
+				"end": {
+					"line": 2,
+					"column": 0
+				}
+			}
+		},
+		{
+			"value": "#",
+			"type": "Kw::Hash",
+			"raw": "#",
+			"range": [37, 38],
+			"loc": {
+				"start": {
+					"line": 2,
+					"column": 0
+				},
+				"end": {
+					"line": 2,
+					"column": 1
+				}
+			}
+		},
+		{
+			"children": [
+				{
+					"value": "set",
+					"type": "Kw::Set",
+					"raw": "set",
+					"range": [38, 41],
+					"loc": {
+						"start": {
+							"line": 2,
+							"column": 1
+						},
+						"end": {
+							"line": 2,
+							"column": 4
 						}
 					}
 				},
 				{
 					"type": "Str",
-					"raw": "\n",
-					"value": "\n",
-					"range": [36, 37],
+					"raw": " ",
+					"value": " ",
+					"range": [41, 42],
 					"loc": {
 						"start": {
-							"line": 1,
-							"column": 36
+							"line": 2,
+							"column": 4
 						},
 						"end": {
 							"line": 2,
-							"column": 0
+							"column": 5
 						}
 					}
 				},
 				{
-					"value": "#",
-					"type": "Kw::Hash",
-					"raw": "#",
-					"range": [37, 38],
+					"value": "heading",
+					"type": "Fn::(Ident: &quot;heading&quot;)",
+					"raw": "heading",
+					"range": [42, 49],
 					"loc": {
 						"start": {
 							"line": 2,
-							"column": 0
+							"column": 5
 						},
 						"end": {
 							"line": 2,
-							"column": 1
+							"column": 12
 						}
 					}
 				},
 				{
 					"children": [
 						{
-							"value": "set",
-							"type": "Kw::Set",
-							"raw": "set",
-							"range": [38, 41],
+							"value": "(",
+							"type": "Punc::LeftParen",
+							"raw": "(",
+							"range": [49, 50],
 							"loc": {
 								"start": {
-									"line": 2,
-									"column": 1
-								},
-								"end": {
-									"line": 2,
-									"column": 4
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [41, 42],
-							"loc": {
-								"start": {
-									"line": 2,
-									"column": 4
-								},
-								"end": {
-									"line": 2,
-									"column": 5
-								}
-							}
-						},
-						{
-							"value": "heading",
-							"type": "Fn::(Ident: &quot;heading&quot;)",
-							"raw": "heading",
-							"range": [42, 49],
-							"loc": {
-								"start": {
-									"line": 2,
-									"column": 5
-								},
-								"end": {
 									"line": 2,
 									"column": 12
+								},
+								"end": {
+									"line": 2,
+									"column": 13
 								}
 							}
 						},
 						{
 							"children": [
 								{
-									"value": "(",
-									"type": "Punc::LeftParen",
-									"raw": "(",
-									"range": [49, 50],
-									"loc": {
-										"start": {
-											"line": 2,
-											"column": 12
-										},
-										"end": {
-											"line": 2,
-											"column": 13
-										}
-									}
-								},
-								{
-									"children": [
-										{
-											"value": "numbering",
-											"type": "Marked::(Ident: &quot;numbering&quot;)",
-											"raw": "numbering",
-											"range": [50, 59],
-											"loc": {
-												"start": {
-													"line": 2,
-													"column": 13
-												},
-												"end": {
-													"line": 2,
-													"column": 22
-												}
-											}
-										},
-										{
-											"value": ":",
-											"type": "Punc::Colon",
-											"raw": ":",
-											"range": [59, 60],
-											"loc": {
-												"start": {
-													"line": 2,
-													"column": 22
-												},
-												"end": {
-													"line": 2,
-													"column": 23
-												}
-											}
-										},
-										{
-											"type": "Str",
-											"raw": " ",
-											"value": " ",
-											"range": [60, 61],
-											"loc": {
-												"start": {
-													"line": 2,
-													"column": 23
-												},
-												"end": {
-													"line": 2,
-													"column": 24
-												}
-											}
-										},
-										{
-											"value": "\"1.\"",
-											"type": "Str(&quot;1.&quot;)",
-											"raw": "\"1.\"",
-											"range": [61, 65],
-											"loc": {
-												"start": {
-													"line": 2,
-													"column": 24
-												},
-												"end": {
-													"line": 2,
-													"column": 28
-												}
-											}
-										}
-									],
-									"type": "Marked::Named",
-									"raw": "numbering: \"1.\"",
-									"range": [50, 65],
+									"value": "numbering",
+									"type": "Marked::(Ident: &quot;numbering&quot;)",
+									"raw": "numbering",
+									"range": [50, 59],
 									"loc": {
 										"start": {
 											"line": 2,
@@ -516,34 +438,82 @@
 										},
 										"end": {
 											"line": 2,
-											"column": 28
+											"column": 22
 										}
 									}
 								},
 								{
-									"value": ")",
-									"type": "Punc::RightParen",
-									"raw": ")",
-									"range": [65, 66],
+									"value": ":",
+									"type": "Punc::Colon",
+									"raw": ":",
+									"range": [59, 60],
 									"loc": {
 										"start": {
 											"line": 2,
-											"column": 28
+											"column": 22
 										},
 										"end": {
 											"line": 2,
-											"column": 29
+											"column": 23
+										}
+									}
+								},
+								{
+									"type": "Str",
+									"raw": " ",
+									"value": " ",
+									"range": [60, 61],
+									"loc": {
+										"start": {
+											"line": 2,
+											"column": 23
+										},
+										"end": {
+											"line": 2,
+											"column": 24
+										}
+									}
+								},
+								{
+									"value": "\"1.\"",
+									"type": "Str(&quot;1.&quot;)",
+									"raw": "\"1.\"",
+									"range": [61, 65],
+									"loc": {
+										"start": {
+											"line": 2,
+											"column": 24
+										},
+										"end": {
+											"line": 2,
+											"column": 28
 										}
 									}
 								}
 							],
-							"type": "Marked::Args",
-							"raw": "(numbering: \"1.\")",
-							"range": [49, 66],
+							"type": "Marked::Named",
+							"raw": "numbering: \"1.\"",
+							"range": [50, 65],
 							"loc": {
 								"start": {
 									"line": 2,
-									"column": 12
+									"column": 13
+								},
+								"end": {
+									"line": 2,
+									"column": 28
+								}
+							}
+						},
+						{
+							"value": ")",
+							"type": "Punc::RightParen",
+							"raw": ")",
+							"range": [65, 66],
+							"loc": {
+								"start": {
+									"line": 2,
+									"column": 28
 								},
 								"end": {
 									"line": 2,
@@ -552,13 +522,13 @@
 							}
 						}
 					],
-					"type": "Marked::SetRule",
-					"raw": "set heading(numbering: \"1.\")",
-					"range": [38, 66],
+					"type": "Marked::Args",
+					"raw": "(numbering: \"1.\")",
+					"range": [49, 66],
 					"loc": {
 						"start": {
 							"line": 2,
-							"column": 1
+							"column": 12
 						},
 						"end": {
 							"line": 2,
@@ -566,7 +536,20 @@
 						}
 					}
 				}
-			]
+			],
+			"type": "Marked::SetRule",
+			"raw": "set heading(numbering: \"1.\")",
+			"range": [38, 66],
+			"loc": {
+				"start": {
+					"line": 2,
+					"column": 1
+				},
+				"end": {
+					"line": 2,
+					"column": 29
+				}
+			}
 		},
 		{
 			"value": "\n\n",
@@ -2633,154 +2616,28 @@
 			}
 		},
 		{
+			"value": "#",
+			"type": "Kw::Hash",
+			"raw": "#",
+			"range": [302, 303],
 			"loc": {
 				"start": {
 					"line": 12,
 					"column": 0
 				},
 				"end": {
-					"line": 17,
+					"line": 12,
 					"column": 1
 				}
-			},
-			"range": [302, 419],
-			"raw": "#let count = 8\n#let nums = range(1, count + 1)\n#let fib(n) = (\n  if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }\n)",
-			"type": "Paragraph",
+			}
+		},
+		{
 			"children": [
 				{
-					"value": "#",
-					"type": "Kw::Hash",
-					"raw": "#",
-					"range": [302, 303],
-					"loc": {
-						"start": {
-							"line": 12,
-							"column": 0
-						},
-						"end": {
-							"line": 12,
-							"column": 1
-						}
-					}
-				},
-				{
-					"children": [
-						{
-							"value": "let",
-							"type": "Kw::Let",
-							"raw": "let",
-							"range": [303, 306],
-							"loc": {
-								"start": {
-									"line": 12,
-									"column": 1
-								},
-								"end": {
-									"line": 12,
-									"column": 4
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [306, 307],
-							"loc": {
-								"start": {
-									"line": 12,
-									"column": 4
-								},
-								"end": {
-									"line": 12,
-									"column": 5
-								}
-							}
-						},
-						{
-							"value": "count",
-							"type": "Marked::(Ident: &quot;count&quot;)",
-							"raw": "count",
-							"range": [307, 312],
-							"loc": {
-								"start": {
-									"line": 12,
-									"column": 5
-								},
-								"end": {
-									"line": 12,
-									"column": 10
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [312, 313],
-							"loc": {
-								"start": {
-									"line": 12,
-									"column": 10
-								},
-								"end": {
-									"line": 12,
-									"column": 11
-								}
-							}
-						},
-						{
-							"value": "=",
-							"type": "Op::Eq",
-							"raw": "=",
-							"range": [313, 314],
-							"loc": {
-								"start": {
-									"line": 12,
-									"column": 11
-								},
-								"end": {
-									"line": 12,
-									"column": 12
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [314, 315],
-							"loc": {
-								"start": {
-									"line": 12,
-									"column": 12
-								},
-								"end": {
-									"line": 12,
-									"column": 13
-								}
-							}
-						},
-						{
-							"value": "8",
-							"type": "Num(Int, 8)",
-							"raw": "8",
-							"range": [315, 316],
-							"loc": {
-								"start": {
-									"line": 12,
-									"column": 13
-								},
-								"end": {
-									"line": 12,
-									"column": 14
-								}
-							}
-						}
-					],
-					"type": "Marked::LetBinding",
-					"raw": "let count = 8",
-					"range": [303, 316],
+					"value": "let",
+					"type": "Kw::Let",
+					"raw": "let",
+					"range": [303, 306],
 					"loc": {
 						"start": {
 							"line": 12,
@@ -2788,205 +2645,350 @@
 						},
 						"end": {
 							"line": 12,
-							"column": 14
+							"column": 4
 						}
 					}
 				},
 				{
 					"type": "Str",
-					"raw": "\n",
-					"value": "\n",
-					"range": [316, 317],
+					"raw": " ",
+					"value": " ",
+					"range": [306, 307],
 					"loc": {
 						"start": {
 							"line": 12,
-							"column": 14
+							"column": 4
 						},
 						"end": {
-							"line": 13,
-							"column": 0
+							"line": 12,
+							"column": 5
 						}
 					}
 				},
 				{
-					"value": "#",
-					"type": "Kw::Hash",
-					"raw": "#",
-					"range": [317, 318],
+					"value": "count",
+					"type": "Marked::(Ident: &quot;count&quot;)",
+					"raw": "count",
+					"range": [307, 312],
+					"loc": {
+						"start": {
+							"line": 12,
+							"column": 5
+						},
+						"end": {
+							"line": 12,
+							"column": 10
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [312, 313],
+					"loc": {
+						"start": {
+							"line": 12,
+							"column": 10
+						},
+						"end": {
+							"line": 12,
+							"column": 11
+						}
+					}
+				},
+				{
+					"value": "=",
+					"type": "Op::Eq",
+					"raw": "=",
+					"range": [313, 314],
+					"loc": {
+						"start": {
+							"line": 12,
+							"column": 11
+						},
+						"end": {
+							"line": 12,
+							"column": 12
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [314, 315],
+					"loc": {
+						"start": {
+							"line": 12,
+							"column": 12
+						},
+						"end": {
+							"line": 12,
+							"column": 13
+						}
+					}
+				},
+				{
+					"value": "8",
+					"type": "Num(Int, 8)",
+					"raw": "8",
+					"range": [315, 316],
+					"loc": {
+						"start": {
+							"line": 12,
+							"column": 13
+						},
+						"end": {
+							"line": 12,
+							"column": 14
+						}
+					}
+				}
+			],
+			"type": "Marked::LetBinding",
+			"raw": "let count = 8",
+			"range": [303, 316],
+			"loc": {
+				"start": {
+					"line": 12,
+					"column": 1
+				},
+				"end": {
+					"line": 12,
+					"column": 14
+				}
+			}
+		},
+		{
+			"type": "Str",
+			"raw": "\n",
+			"value": "\n",
+			"range": [316, 317],
+			"loc": {
+				"start": {
+					"line": 12,
+					"column": 14
+				},
+				"end": {
+					"line": 13,
+					"column": 0
+				}
+			}
+		},
+		{
+			"value": "#",
+			"type": "Kw::Hash",
+			"raw": "#",
+			"range": [317, 318],
+			"loc": {
+				"start": {
+					"line": 13,
+					"column": 0
+				},
+				"end": {
+					"line": 13,
+					"column": 1
+				}
+			}
+		},
+		{
+			"children": [
+				{
+					"value": "let",
+					"type": "Kw::Let",
+					"raw": "let",
+					"range": [318, 321],
 					"loc": {
 						"start": {
 							"line": 13,
-							"column": 0
+							"column": 1
 						},
 						"end": {
 							"line": 13,
-							"column": 1
+							"column": 4
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [321, 322],
+					"loc": {
+						"start": {
+							"line": 13,
+							"column": 4
+						},
+						"end": {
+							"line": 13,
+							"column": 5
+						}
+					}
+				},
+				{
+					"value": "nums",
+					"type": "Marked::(Ident: &quot;nums&quot;)",
+					"raw": "nums",
+					"range": [322, 326],
+					"loc": {
+						"start": {
+							"line": 13,
+							"column": 5
+						},
+						"end": {
+							"line": 13,
+							"column": 9
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [326, 327],
+					"loc": {
+						"start": {
+							"line": 13,
+							"column": 9
+						},
+						"end": {
+							"line": 13,
+							"column": 10
+						}
+					}
+				},
+				{
+					"value": "=",
+					"type": "Op::Eq",
+					"raw": "=",
+					"range": [327, 328],
+					"loc": {
+						"start": {
+							"line": 13,
+							"column": 10
+						},
+						"end": {
+							"line": 13,
+							"column": 11
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [328, 329],
+					"loc": {
+						"start": {
+							"line": 13,
+							"column": 11
+						},
+						"end": {
+							"line": 13,
+							"column": 12
 						}
 					}
 				},
 				{
 					"children": [
 						{
-							"value": "let",
-							"type": "Kw::Let",
-							"raw": "let",
-							"range": [318, 321],
+							"value": "range",
+							"type": "Fn::(Ident: &quot;range&quot;)",
+							"raw": "range",
+							"range": [329, 334],
 							"loc": {
 								"start": {
-									"line": 13,
-									"column": 1
-								},
-								"end": {
-									"line": 13,
-									"column": 4
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [321, 322],
-							"loc": {
-								"start": {
-									"line": 13,
-									"column": 4
-								},
-								"end": {
-									"line": 13,
-									"column": 5
-								}
-							}
-						},
-						{
-							"value": "nums",
-							"type": "Marked::(Ident: &quot;nums&quot;)",
-							"raw": "nums",
-							"range": [322, 326],
-							"loc": {
-								"start": {
-									"line": 13,
-									"column": 5
-								},
-								"end": {
-									"line": 13,
-									"column": 9
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [326, 327],
-							"loc": {
-								"start": {
-									"line": 13,
-									"column": 9
-								},
-								"end": {
-									"line": 13,
-									"column": 10
-								}
-							}
-						},
-						{
-							"value": "=",
-							"type": "Op::Eq",
-							"raw": "=",
-							"range": [327, 328],
-							"loc": {
-								"start": {
-									"line": 13,
-									"column": 10
-								},
-								"end": {
-									"line": 13,
-									"column": 11
-								}
-							}
-						},
-						{
-							"type": "Str",
-							"raw": " ",
-							"value": " ",
-							"range": [328, 329],
-							"loc": {
-								"start": {
-									"line": 13,
-									"column": 11
-								},
-								"end": {
 									"line": 13,
 									"column": 12
+								},
+								"end": {
+									"line": 13,
+									"column": 17
 								}
 							}
 						},
 						{
 							"children": [
 								{
-									"value": "range",
-									"type": "Fn::(Ident: &quot;range&quot;)",
-									"raw": "range",
-									"range": [329, 334],
+									"value": "(",
+									"type": "Punc::LeftParen",
+									"raw": "(",
+									"range": [334, 335],
 									"loc": {
 										"start": {
 											"line": 13,
-											"column": 12
+											"column": 17
 										},
 										"end": {
 											"line": 13,
-											"column": 17
+											"column": 18
+										}
+									}
+								},
+								{
+									"value": "1",
+									"type": "Num(Int, 1)",
+									"raw": "1",
+									"range": [335, 336],
+									"loc": {
+										"start": {
+											"line": 13,
+											"column": 18
+										},
+										"end": {
+											"line": 13,
+											"column": 19
+										}
+									}
+								},
+								{
+									"value": ",",
+									"type": "Punc::Comma",
+									"raw": ",",
+									"range": [336, 337],
+									"loc": {
+										"start": {
+											"line": 13,
+											"column": 19
+										},
+										"end": {
+											"line": 13,
+											"column": 20
+										}
+									}
+								},
+								{
+									"type": "Str",
+									"raw": " ",
+									"value": " ",
+									"range": [337, 338],
+									"loc": {
+										"start": {
+											"line": 13,
+											"column": 20
+										},
+										"end": {
+											"line": 13,
+											"column": 21
 										}
 									}
 								},
 								{
 									"children": [
 										{
-											"value": "(",
-											"type": "Punc::LeftParen",
-											"raw": "(",
-											"range": [334, 335],
+											"value": "count",
+											"type": "Marked::(Ident: &quot;count&quot;)",
+											"raw": "count",
+											"range": [338, 343],
 											"loc": {
 												"start": {
 													"line": 13,
-													"column": 17
+													"column": 21
 												},
 												"end": {
 													"line": 13,
-													"column": 18
-												}
-											}
-										},
-										{
-											"value": "1",
-											"type": "Num(Int, 1)",
-											"raw": "1",
-											"range": [335, 336],
-											"loc": {
-												"start": {
-													"line": 13,
-													"column": 18
-												},
-												"end": {
-													"line": 13,
-													"column": 19
-												}
-											}
-										},
-										{
-											"value": ",",
-											"type": "Punc::Comma",
-											"raw": ",",
-											"range": [336, 337],
-											"loc": {
-												"start": {
-													"line": 13,
-													"column": 19
-												},
-												"end": {
-													"line": 13,
-													"column": 20
+													"column": 26
 												}
 											}
 										},
@@ -2994,139 +2996,90 @@
 											"type": "Str",
 											"raw": " ",
 											"value": " ",
-											"range": [337, 338],
+											"range": [343, 344],
 											"loc": {
 												"start": {
 													"line": 13,
-													"column": 20
+													"column": 26
 												},
 												"end": {
 													"line": 13,
-													"column": 21
+													"column": 27
 												}
 											}
 										},
 										{
-											"children": [
-												{
-													"value": "count",
-													"type": "Marked::(Ident: &quot;count&quot;)",
-													"raw": "count",
-													"range": [338, 343],
-													"loc": {
-														"start": {
-															"line": 13,
-															"column": 21
-														},
-														"end": {
-															"line": 13,
-															"column": 26
-														}
-													}
-												},
-												{
-													"type": "Str",
-													"raw": " ",
-													"value": " ",
-													"range": [343, 344],
-													"loc": {
-														"start": {
-															"line": 13,
-															"column": 26
-														},
-														"end": {
-															"line": 13,
-															"column": 27
-														}
-													}
-												},
-												{
-													"value": "+",
-													"type": "Op::Plus",
-													"raw": "+",
-													"range": [344, 345],
-													"loc": {
-														"start": {
-															"line": 13,
-															"column": 27
-														},
-														"end": {
-															"line": 13,
-															"column": 28
-														}
-													}
-												},
-												{
-													"type": "Str",
-													"raw": " ",
-													"value": " ",
-													"range": [345, 346],
-													"loc": {
-														"start": {
-															"line": 13,
-															"column": 28
-														},
-														"end": {
-															"line": 13,
-															"column": 29
-														}
-													}
-												},
-												{
-													"value": "1",
-													"type": "Num(Int, 1)",
-													"raw": "1",
-													"range": [346, 347],
-													"loc": {
-														"start": {
-															"line": 13,
-															"column": 29
-														},
-														"end": {
-															"line": 13,
-															"column": 30
-														}
-													}
-												}
-											],
-											"type": "Marked::Binary",
-											"raw": "count + 1",
-											"range": [338, 347],
+											"value": "+",
+											"type": "Op::Plus",
+											"raw": "+",
+											"range": [344, 345],
 											"loc": {
 												"start": {
 													"line": 13,
-													"column": 21
+													"column": 27
 												},
 												"end": {
 													"line": 13,
-													"column": 30
+													"column": 28
 												}
 											}
 										},
 										{
-											"value": ")",
-											"type": "Punc::RightParen",
-											"raw": ")",
-											"range": [347, 348],
+											"type": "Str",
+											"raw": " ",
+											"value": " ",
+											"range": [345, 346],
 											"loc": {
 												"start": {
 													"line": 13,
-													"column": 30
+													"column": 28
 												},
 												"end": {
 													"line": 13,
-													"column": 31
+													"column": 29
+												}
+											}
+										},
+										{
+											"value": "1",
+											"type": "Num(Int, 1)",
+											"raw": "1",
+											"range": [346, 347],
+											"loc": {
+												"start": {
+													"line": 13,
+													"column": 29
+												},
+												"end": {
+													"line": 13,
+													"column": 30
 												}
 											}
 										}
 									],
-									"type": "Marked::Args",
-									"raw": "(1, count + 1)",
-									"range": [334, 348],
+									"type": "Marked::Binary",
+									"raw": "count + 1",
+									"range": [338, 347],
 									"loc": {
 										"start": {
 											"line": 13,
-											"column": 17
+											"column": 21
+										},
+										"end": {
+											"line": 13,
+											"column": 30
+										}
+									}
+								},
+								{
+									"value": ")",
+									"type": "Punc::RightParen",
+									"raw": ")",
+									"range": [347, 348],
+									"loc": {
+										"start": {
+											"line": 13,
+											"column": 30
 										},
 										"end": {
 											"line": 13,
@@ -3135,13 +3088,13 @@
 									}
 								}
 							],
-							"type": "Marked::FuncCall",
-							"raw": "range(1, count + 1)",
-							"range": [329, 348],
+							"type": "Marked::Args",
+							"raw": "(1, count + 1)",
+							"range": [334, 348],
 							"loc": {
 								"start": {
 									"line": 13,
-									"column": 12
+									"column": 17
 								},
 								"end": {
 									"line": 13,
@@ -3150,67 +3103,181 @@
 							}
 						}
 					],
-					"type": "Marked::LetBinding",
-					"raw": "let nums = range(1, count + 1)",
-					"range": [318, 348],
+					"type": "Marked::FuncCall",
+					"raw": "range(1, count + 1)",
+					"range": [329, 348],
 					"loc": {
 						"start": {
 							"line": 13,
-							"column": 1
+							"column": 12
 						},
 						"end": {
 							"line": 13,
 							"column": 31
+						}
+					}
+				}
+			],
+			"type": "Marked::LetBinding",
+			"raw": "let nums = range(1, count + 1)",
+			"range": [318, 348],
+			"loc": {
+				"start": {
+					"line": 13,
+					"column": 1
+				},
+				"end": {
+					"line": 13,
+					"column": 31
+				}
+			}
+		},
+		{
+			"type": "Str",
+			"raw": "\n",
+			"value": "\n",
+			"range": [348, 349],
+			"loc": {
+				"start": {
+					"line": 13,
+					"column": 31
+				},
+				"end": {
+					"line": 14,
+					"column": 0
+				}
+			}
+		},
+		{
+			"value": "#",
+			"type": "Kw::Hash",
+			"raw": "#",
+			"range": [349, 350],
+			"loc": {
+				"start": {
+					"line": 14,
+					"column": 0
+				},
+				"end": {
+					"line": 14,
+					"column": 1
+				}
+			}
+		},
+		{
+			"children": [
+				{
+					"value": "let",
+					"type": "Kw::Let",
+					"raw": "let",
+					"range": [350, 353],
+					"loc": {
+						"start": {
+							"line": 14,
+							"column": 1
+						},
+						"end": {
+							"line": 14,
+							"column": 4
 						}
 					}
 				},
 				{
 					"type": "Str",
-					"raw": "\n",
-					"value": "\n",
-					"range": [348, 349],
-					"loc": {
-						"start": {
-							"line": 13,
-							"column": 31
-						},
-						"end": {
-							"line": 14,
-							"column": 0
-						}
-					}
-				},
-				{
-					"value": "#",
-					"type": "Kw::Hash",
-					"raw": "#",
-					"range": [349, 350],
+					"raw": " ",
+					"value": " ",
+					"range": [353, 354],
 					"loc": {
 						"start": {
 							"line": 14,
-							"column": 0
+							"column": 4
 						},
 						"end": {
 							"line": 14,
-							"column": 1
+							"column": 5
 						}
 					}
 				},
 				{
 					"children": [
 						{
-							"value": "let",
-							"type": "Kw::Let",
-							"raw": "let",
-							"range": [350, 353],
+							"value": "fib",
+							"type": "Fn::(Ident: &quot;fib&quot;)",
+							"raw": "fib",
+							"range": [354, 357],
 							"loc": {
 								"start": {
 									"line": 14,
-									"column": 1
+									"column": 5
 								},
 								"end": {
 									"line": 14,
-									"column": 4
+									"column": 8
+								}
+							}
+						},
+						{
+							"children": [
+								{
+									"value": "(",
+									"type": "Punc::LeftParen",
+									"raw": "(",
+									"range": [357, 358],
+									"loc": {
+										"start": {
+											"line": 14,
+											"column": 8
+										},
+										"end": {
+											"line": 14,
+											"column": 9
+										}
+									}
+								},
+								{
+									"value": "n",
+									"type": "Marked::(Ident: &quot;n&quot;)",
+									"raw": "n",
+									"range": [358, 359],
+									"loc": {
+										"start": {
+											"line": 14,
+											"column": 9
+										},
+										"end": {
+											"line": 14,
+											"column": 10
+										}
+									}
+								},
+								{
+									"value": ")",
+									"type": "Punc::RightParen",
+									"raw": ")",
+									"range": [359, 360],
+									"loc": {
+										"start": {
+											"line": 14,
+											"column": 10
+										},
+										"end": {
+											"line": 14,
+											"column": 11
+										}
+									}
+								}
+							],
+							"type": "Marked::Params",
+							"raw": "(n)",
+							"range": [357, 360],
+							"loc": {
+								"start": {
+									"line": 14,
+									"column": 8
+								},
+								"end": {
+									"line": 14,
+									"column": 11
 								}
 							}
 						},
@@ -3218,303 +3285,125 @@
 							"type": "Str",
 							"raw": " ",
 							"value": " ",
-							"range": [353, 354],
+							"range": [360, 361],
 							"loc": {
 								"start": {
 									"line": 14,
-									"column": 4
+									"column": 11
 								},
 								"end": {
 									"line": 14,
-									"column": 5
+									"column": 12
+								}
+							}
+						},
+						{
+							"value": "=",
+							"type": "Op::Eq",
+							"raw": "=",
+							"range": [361, 362],
+							"loc": {
+								"start": {
+									"line": 14,
+									"column": 12
+								},
+								"end": {
+									"line": 14,
+									"column": 13
+								}
+							}
+						},
+						{
+							"type": "Str",
+							"raw": " ",
+							"value": " ",
+							"range": [362, 363],
+							"loc": {
+								"start": {
+									"line": 14,
+									"column": 13
+								},
+								"end": {
+									"line": 14,
+									"column": 14
 								}
 							}
 						},
 						{
 							"children": [
 								{
-									"value": "fib",
-									"type": "Fn::(Ident: &quot;fib&quot;)",
-									"raw": "fib",
-									"range": [354, 357],
+									"value": "(",
+									"type": "Punc::LeftParen",
+									"raw": "(",
+									"range": [363, 364],
 									"loc": {
 										"start": {
-											"line": 14,
-											"column": 5
-										},
-										"end": {
-											"line": 14,
-											"column": 8
-										}
-									}
-								},
-								{
-									"children": [
-										{
-											"value": "(",
-											"type": "Punc::LeftParen",
-											"raw": "(",
-											"range": [357, 358],
-											"loc": {
-												"start": {
-													"line": 14,
-													"column": 8
-												},
-												"end": {
-													"line": 14,
-													"column": 9
-												}
-											}
-										},
-										{
-											"value": "n",
-											"type": "Marked::(Ident: &quot;n&quot;)",
-											"raw": "n",
-											"range": [358, 359],
-											"loc": {
-												"start": {
-													"line": 14,
-													"column": 9
-												},
-												"end": {
-													"line": 14,
-													"column": 10
-												}
-											}
-										},
-										{
-											"value": ")",
-											"type": "Punc::RightParen",
-											"raw": ")",
-											"range": [359, 360],
-											"loc": {
-												"start": {
-													"line": 14,
-													"column": 10
-												},
-												"end": {
-													"line": 14,
-													"column": 11
-												}
-											}
-										}
-									],
-									"type": "Marked::Params",
-									"raw": "(n)",
-									"range": [357, 360],
-									"loc": {
-										"start": {
-											"line": 14,
-											"column": 8
-										},
-										"end": {
-											"line": 14,
-											"column": 11
-										}
-									}
-								},
-								{
-									"type": "Str",
-									"raw": " ",
-									"value": " ",
-									"range": [360, 361],
-									"loc": {
-										"start": {
-											"line": 14,
-											"column": 11
-										},
-										"end": {
-											"line": 14,
-											"column": 12
-										}
-									}
-								},
-								{
-									"value": "=",
-									"type": "Op::Eq",
-									"raw": "=",
-									"range": [361, 362],
-									"loc": {
-										"start": {
-											"line": 14,
-											"column": 12
-										},
-										"end": {
-											"line": 14,
-											"column": 13
-										}
-									}
-								},
-								{
-									"type": "Str",
-									"raw": " ",
-									"value": " ",
-									"range": [362, 363],
-									"loc": {
-										"start": {
-											"line": 14,
-											"column": 13
-										},
-										"end": {
 											"line": 14,
 											"column": 14
+										},
+										"end": {
+											"line": 14,
+											"column": 15
+										}
+									}
+								},
+								{
+									"type": "Str",
+									"raw": "\n",
+									"value": "\n",
+									"range": [364, 365],
+									"loc": {
+										"start": {
+											"line": 14,
+											"column": 15
+										},
+										"end": {
+											"line": 15,
+											"column": 2
 										}
 									}
 								},
 								{
 									"children": [
 										{
-											"value": "(",
-											"type": "Punc::LeftParen",
-											"raw": "(",
-											"range": [363, 364],
+											"value": "if",
+											"type": "Kw::If",
+											"raw": "if",
+											"range": [365, 367],
 											"loc": {
 												"start": {
-													"line": 14,
-													"column": 14
+													"line": 15,
+													"column": 2
 												},
 												"end": {
-													"line": 14,
-													"column": 15
+													"line": 15,
+													"column": 4
 												}
 											}
 										},
 										{
 											"type": "Str",
-											"raw": "\n",
-											"value": "\n",
-											"range": [364, 365],
+											"raw": " ",
+											"value": " ",
+											"range": [367, 368],
 											"loc": {
 												"start": {
-													"line": 14,
-													"column": 15
+													"line": 15,
+													"column": 4
 												},
 												"end": {
 													"line": 15,
-													"column": 2
+													"column": 5
 												}
 											}
 										},
 										{
 											"children": [
 												{
-													"value": "if",
-													"type": "Kw::If",
-													"raw": "if",
-													"range": [365, 367],
-													"loc": {
-														"start": {
-															"line": 15,
-															"column": 2
-														},
-														"end": {
-															"line": 15,
-															"column": 4
-														}
-													}
-												},
-												{
-													"type": "Str",
-													"raw": " ",
-													"value": " ",
-													"range": [367, 368],
-													"loc": {
-														"start": {
-															"line": 15,
-															"column": 4
-														},
-														"end": {
-															"line": 15,
-															"column": 5
-														}
-													}
-												},
-												{
-													"children": [
-														{
-															"value": "n",
-															"type": "Marked::(Ident: &quot;n&quot;)",
-															"raw": "n",
-															"range": [368, 369],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 5
-																},
-																"end": {
-																	"line": 15,
-																	"column": 6
-																}
-															}
-														},
-														{
-															"type": "Str",
-															"raw": " ",
-															"value": " ",
-															"range": [369, 370],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 6
-																},
-																"end": {
-																	"line": 15,
-																	"column": 7
-																}
-															}
-														},
-														{
-															"value": "<=",
-															"type": "Op::LtEq",
-															"raw": "<=",
-															"range": [370, 372],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 7
-																},
-																"end": {
-																	"line": 15,
-																	"column": 9
-																}
-															}
-														},
-														{
-															"type": "Str",
-															"raw": " ",
-															"value": " ",
-															"range": [372, 373],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 9
-																},
-																"end": {
-																	"line": 15,
-																	"column": 10
-																}
-															}
-														},
-														{
-															"value": "2",
-															"type": "Num(Int, 2)",
-															"raw": "2",
-															"range": [373, 374],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 10
-																},
-																"end": {
-																	"line": 15,
-																	"column": 11
-																}
-															}
-														}
-													],
-													"type": "Marked::Binary",
-													"raw": "n <= 2",
-													"range": [368, 374],
+													"value": "n",
+													"type": "Marked::(Ident: &quot;n&quot;)",
+													"raw": "n",
+													"range": [368, 369],
 													"loc": {
 														"start": {
 															"line": 15,
@@ -3522,7 +3411,7 @@
 														},
 														"end": {
 															"line": 15,
-															"column": 11
+															"column": 6
 														}
 													}
 												},
@@ -3530,72 +3419,136 @@
 													"type": "Str",
 													"raw": " ",
 													"value": " ",
-													"range": [374, 375],
+													"range": [369, 370],
 													"loc": {
 														"start": {
 															"line": 15,
-															"column": 11
+															"column": 6
 														},
 														"end": {
+															"line": 15,
+															"column": 7
+														}
+													}
+												},
+												{
+													"value": "<=",
+													"type": "Op::LtEq",
+													"raw": "<=",
+													"range": [370, 372],
+													"loc": {
+														"start": {
+															"line": 15,
+															"column": 7
+														},
+														"end": {
+															"line": 15,
+															"column": 9
+														}
+													}
+												},
+												{
+													"type": "Str",
+													"raw": " ",
+													"value": " ",
+													"range": [372, 373],
+													"loc": {
+														"start": {
+															"line": 15,
+															"column": 9
+														},
+														"end": {
+															"line": 15,
+															"column": 10
+														}
+													}
+												},
+												{
+													"value": "2",
+													"type": "Num(Int, 2)",
+													"raw": "2",
+													"range": [373, 374],
+													"loc": {
+														"start": {
+															"line": 15,
+															"column": 10
+														},
+														"end": {
+															"line": 15,
+															"column": 11
+														}
+													}
+												}
+											],
+											"type": "Marked::Binary",
+											"raw": "n <= 2",
+											"range": [368, 374],
+											"loc": {
+												"start": {
+													"line": 15,
+													"column": 5
+												},
+												"end": {
+													"line": 15,
+													"column": 11
+												}
+											}
+										},
+										{
+											"type": "Str",
+											"raw": " ",
+											"value": " ",
+											"range": [374, 375],
+											"loc": {
+												"start": {
+													"line": 15,
+													"column": 11
+												},
+												"end": {
+													"line": 15,
+													"column": 12
+												}
+											}
+										},
+										{
+											"children": [
+												{
+													"value": "{",
+													"type": "Punc::LeftBrace",
+													"raw": "{",
+													"range": [375, 376],
+													"loc": {
+														"start": {
 															"line": 15,
 															"column": 12
+														},
+														"end": {
+															"line": 15,
+															"column": 13
+														}
+													}
+												},
+												{
+													"type": "Str",
+													"raw": " ",
+													"value": " ",
+													"range": [376, 377],
+													"loc": {
+														"start": {
+															"line": 15,
+															"column": 13
+														},
+														"end": {
+															"line": 15,
+															"column": 14
 														}
 													}
 												},
 												{
 													"children": [
 														{
-															"value": "{",
-															"type": "Punc::LeftBrace",
-															"raw": "{",
-															"range": [375, 376],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 12
-																},
-																"end": {
-																	"line": 15,
-																	"column": 13
-																}
-															}
-														},
-														{
-															"type": "Str",
-															"raw": " ",
-															"value": " ",
-															"range": [376, 377],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 13
-																},
-																"end": {
-																	"line": 15,
-																	"column": 14
-																}
-															}
-														},
-														{
-															"children": [
-																{
-																	"value": "1",
-																	"type": "Num(Int, 1)",
-																	"raw": "1",
-																	"range": [377, 378],
-																	"loc": {
-																		"start": {
-																			"line": 15,
-																			"column": 14
-																		},
-																		"end": {
-																			"line": 15,
-																			"column": 15
-																		}
-																	}
-																}
-															],
-															"type": "Marked::Code",
+															"value": "1",
+															"type": "Num(Int, 1)",
 															"raw": "1",
 															"range": [377, 378],
 															"loc": {
@@ -3608,83 +3561,19 @@
 																	"column": 15
 																}
 															}
-														},
-														{
-															"type": "Str",
-															"raw": " ",
-															"value": " ",
-															"range": [378, 379],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 15
-																},
-																"end": {
-																	"line": 15,
-																	"column": 16
-																}
-															}
-														},
-														{
-															"value": "}",
-															"type": "Punc::RightBrace",
-															"raw": "}",
-															"range": [379, 380],
-															"loc": {
-																"start": {
-																	"line": 15,
-																	"column": 16
-																},
-																"end": {
-																	"line": 15,
-																	"column": 17
-																}
-															}
 														}
 													],
-													"type": "Marked::CodeBlock",
-													"raw": "{ 1 }",
-													"range": [375, 380],
+													"type": "Marked::Code",
+													"raw": "1",
+													"range": [377, 378],
 													"loc": {
 														"start": {
 															"line": 15,
-															"column": 12
+															"column": 14
 														},
 														"end": {
 															"line": 15,
-															"column": 17
-														}
-													}
-												},
-												{
-													"type": "Str",
-													"raw": "\n",
-													"value": "\n",
-													"range": [380, 381],
-													"loc": {
-														"start": {
-															"line": 15,
-															"column": 17
-														},
-														"end": {
-															"line": 16,
-															"column": 2
-														}
-													}
-												},
-												{
-													"value": "else",
-													"type": "Kw::Else",
-													"raw": "else",
-													"range": [381, 385],
-													"loc": {
-														"start": {
-															"line": 16,
-															"column": 2
-														},
-														"end": {
-															"line": 16,
-															"column": 6
+															"column": 15
 														}
 													}
 												},
@@ -3692,178 +3581,178 @@
 													"type": "Str",
 													"raw": " ",
 													"value": " ",
-													"range": [385, 386],
+													"range": [378, 379],
+													"loc": {
+														"start": {
+															"line": 15,
+															"column": 15
+														},
+														"end": {
+															"line": 15,
+															"column": 16
+														}
+													}
+												},
+												{
+													"value": "}",
+													"type": "Punc::RightBrace",
+													"raw": "}",
+													"range": [379, 380],
+													"loc": {
+														"start": {
+															"line": 15,
+															"column": 16
+														},
+														"end": {
+															"line": 15,
+															"column": 17
+														}
+													}
+												}
+											],
+											"type": "Marked::CodeBlock",
+											"raw": "{ 1 }",
+											"range": [375, 380],
+											"loc": {
+												"start": {
+													"line": 15,
+													"column": 12
+												},
+												"end": {
+													"line": 15,
+													"column": 17
+												}
+											}
+										},
+										{
+											"type": "Str",
+											"raw": "\n",
+											"value": "\n",
+											"range": [380, 381],
+											"loc": {
+												"start": {
+													"line": 15,
+													"column": 17
+												},
+												"end": {
+													"line": 16,
+													"column": 2
+												}
+											}
+										},
+										{
+											"value": "else",
+											"type": "Kw::Else",
+											"raw": "else",
+											"range": [381, 385],
+											"loc": {
+												"start": {
+													"line": 16,
+													"column": 2
+												},
+												"end": {
+													"line": 16,
+													"column": 6
+												}
+											}
+										},
+										{
+											"type": "Str",
+											"raw": " ",
+											"value": " ",
+											"range": [385, 386],
+											"loc": {
+												"start": {
+													"line": 16,
+													"column": 6
+												},
+												"end": {
+													"line": 16,
+													"column": 7
+												}
+											}
+										},
+										{
+											"children": [
+												{
+													"value": "{",
+													"type": "Punc::LeftBrace",
+													"raw": "{",
+													"range": [386, 387],
 													"loc": {
 														"start": {
 															"line": 16,
-															"column": 6
+															"column": 7
 														},
 														"end": {
 															"line": 16,
-															"column": 7
+															"column": 8
+														}
+													}
+												},
+												{
+													"type": "Str",
+													"raw": " ",
+													"value": " ",
+													"range": [387, 388],
+													"loc": {
+														"start": {
+															"line": 16,
+															"column": 8
+														},
+														"end": {
+															"line": 16,
+															"column": 9
 														}
 													}
 												},
 												{
 													"children": [
 														{
-															"value": "{",
-															"type": "Punc::LeftBrace",
-															"raw": "{",
-															"range": [386, 387],
-															"loc": {
-																"start": {
-																	"line": 16,
-																	"column": 7
-																},
-																"end": {
-																	"line": 16,
-																	"column": 8
-																}
-															}
-														},
-														{
-															"type": "Str",
-															"raw": " ",
-															"value": " ",
-															"range": [387, 388],
-															"loc": {
-																"start": {
-																	"line": 16,
-																	"column": 8
-																},
-																"end": {
-																	"line": 16,
-																	"column": 9
-																}
-															}
-														},
-														{
 															"children": [
 																{
 																	"children": [
 																		{
+																			"value": "fib",
+																			"type": "Fn::(Ident: &quot;fib&quot;)",
+																			"raw": "fib",
+																			"range": [388, 391],
+																			"loc": {
+																				"start": {
+																					"line": 16,
+																					"column": 9
+																				},
+																				"end": {
+																					"line": 16,
+																					"column": 12
+																				}
+																			}
+																		},
+																		{
 																			"children": [
 																				{
-																					"value": "fib",
-																					"type": "Fn::(Ident: &quot;fib&quot;)",
-																					"raw": "fib",
-																					"range": [388, 391],
+																					"value": "(",
+																					"type": "Punc::LeftParen",
+																					"raw": "(",
+																					"range": [391, 392],
 																					"loc": {
 																						"start": {
 																							"line": 16,
-																							"column": 9
+																							"column": 12
 																						},
 																						"end": {
 																							"line": 16,
-																							"column": 12
+																							"column": 13
 																						}
 																					}
 																				},
 																				{
 																					"children": [
 																						{
-																							"value": "(",
-																							"type": "Punc::LeftParen",
-																							"raw": "(",
-																							"range": [391, 392],
-																							"loc": {
-																								"start": {
-																									"line": 16,
-																									"column": 12
-																								},
-																								"end": {
-																									"line": 16,
-																									"column": 13
-																								}
-																							}
-																						},
-																						{
-																							"children": [
-																								{
-																									"value": "n",
-																									"type": "Marked::(Ident: &quot;n&quot;)",
-																									"raw": "n",
-																									"range": [392, 393],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 13
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 14
-																										}
-																									}
-																								},
-																								{
-																									"type": "Str",
-																									"raw": " ",
-																									"value": " ",
-																									"range": [393, 394],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 14
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 15
-																										}
-																									}
-																								},
-																								{
-																									"value": "-",
-																									"type": "Op::Minus",
-																									"raw": "-",
-																									"range": [394, 395],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 15
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 16
-																										}
-																									}
-																								},
-																								{
-																									"type": "Str",
-																									"raw": " ",
-																									"value": " ",
-																									"range": [395, 396],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 16
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 17
-																										}
-																									}
-																								},
-																								{
-																									"value": "1",
-																									"type": "Num(Int, 1)",
-																									"raw": "1",
-																									"range": [396, 397],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 17
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 18
-																										}
-																									}
-																								}
-																							],
-																							"type": "Marked::Binary",
-																							"raw": "n - 1",
-																							"range": [392, 397],
+																							"value": "n",
+																							"type": "Marked::(Ident: &quot;n&quot;)",
+																							"raw": "n",
+																							"range": [392, 393],
 																							"loc": {
 																								"start": {
 																									"line": 16,
@@ -3871,34 +3760,98 @@
 																								},
 																								"end": {
 																									"line": 16,
-																									"column": 18
+																									"column": 14
 																								}
 																							}
 																						},
 																						{
-																							"value": ")",
-																							"type": "Punc::RightParen",
-																							"raw": ")",
-																							"range": [397, 398],
+																							"type": "Str",
+																							"raw": " ",
+																							"value": " ",
+																							"range": [393, 394],
 																							"loc": {
 																								"start": {
 																									"line": 16,
-																									"column": 18
+																									"column": 14
 																								},
 																								"end": {
 																									"line": 16,
-																									"column": 19
+																									"column": 15
+																								}
+																							}
+																						},
+																						{
+																							"value": "-",
+																							"type": "Op::Minus",
+																							"raw": "-",
+																							"range": [394, 395],
+																							"loc": {
+																								"start": {
+																									"line": 16,
+																									"column": 15
+																								},
+																								"end": {
+																									"line": 16,
+																									"column": 16
+																								}
+																							}
+																						},
+																						{
+																							"type": "Str",
+																							"raw": " ",
+																							"value": " ",
+																							"range": [395, 396],
+																							"loc": {
+																								"start": {
+																									"line": 16,
+																									"column": 16
+																								},
+																								"end": {
+																									"line": 16,
+																									"column": 17
+																								}
+																							}
+																						},
+																						{
+																							"value": "1",
+																							"type": "Num(Int, 1)",
+																							"raw": "1",
+																							"range": [396, 397],
+																							"loc": {
+																								"start": {
+																									"line": 16,
+																									"column": 17
+																								},
+																								"end": {
+																									"line": 16,
+																									"column": 18
 																								}
 																							}
 																						}
 																					],
-																					"type": "Marked::Args",
-																					"raw": "(n - 1)",
-																					"range": [391, 398],
+																					"type": "Marked::Binary",
+																					"raw": "n - 1",
+																					"range": [392, 397],
 																					"loc": {
 																						"start": {
 																							"line": 16,
-																							"column": 12
+																							"column": 13
+																						},
+																						"end": {
+																							"line": 16,
+																							"column": 18
+																						}
+																					}
+																				},
+																				{
+																					"value": ")",
+																					"type": "Punc::RightParen",
+																					"raw": ")",
+																					"range": [397, 398],
+																					"loc": {
+																						"start": {
+																							"line": 16,
+																							"column": 18
 																						},
 																						"end": {
 																							"line": 16,
@@ -3907,190 +3860,126 @@
 																					}
 																				}
 																			],
-																			"type": "Marked::FuncCall",
-																			"raw": "fib(n - 1)",
-																			"range": [388, 398],
+																			"type": "Marked::Args",
+																			"raw": "(n - 1)",
+																			"range": [391, 398],
 																			"loc": {
 																				"start": {
 																					"line": 16,
-																					"column": 9
+																					"column": 12
 																				},
 																				"end": {
 																					"line": 16,
 																					"column": 19
 																				}
 																			}
+																		}
+																	],
+																	"type": "Marked::FuncCall",
+																	"raw": "fib(n - 1)",
+																	"range": [388, 398],
+																	"loc": {
+																		"start": {
+																			"line": 16,
+																			"column": 9
 																		},
+																		"end": {
+																			"line": 16,
+																			"column": 19
+																		}
+																	}
+																},
+																{
+																	"type": "Str",
+																	"raw": " ",
+																	"value": " ",
+																	"range": [398, 399],
+																	"loc": {
+																		"start": {
+																			"line": 16,
+																			"column": 19
+																		},
+																		"end": {
+																			"line": 16,
+																			"column": 20
+																		}
+																	}
+																},
+																{
+																	"value": "+",
+																	"type": "Op::Plus",
+																	"raw": "+",
+																	"range": [399, 400],
+																	"loc": {
+																		"start": {
+																			"line": 16,
+																			"column": 20
+																		},
+																		"end": {
+																			"line": 16,
+																			"column": 21
+																		}
+																	}
+																},
+																{
+																	"type": "Str",
+																	"raw": " ",
+																	"value": " ",
+																	"range": [400, 401],
+																	"loc": {
+																		"start": {
+																			"line": 16,
+																			"column": 21
+																		},
+																		"end": {
+																			"line": 16,
+																			"column": 22
+																		}
+																	}
+																},
+																{
+																	"children": [
 																		{
-																			"type": "Str",
-																			"raw": " ",
-																			"value": " ",
-																			"range": [398, 399],
+																			"value": "fib",
+																			"type": "Fn::(Ident: &quot;fib&quot;)",
+																			"raw": "fib",
+																			"range": [401, 404],
 																			"loc": {
 																				"start": {
-																					"line": 16,
-																					"column": 19
-																				},
-																				"end": {
-																					"line": 16,
-																					"column": 20
-																				}
-																			}
-																		},
-																		{
-																			"value": "+",
-																			"type": "Op::Plus",
-																			"raw": "+",
-																			"range": [399, 400],
-																			"loc": {
-																				"start": {
-																					"line": 16,
-																					"column": 20
-																				},
-																				"end": {
-																					"line": 16,
-																					"column": 21
-																				}
-																			}
-																		},
-																		{
-																			"type": "Str",
-																			"raw": " ",
-																			"value": " ",
-																			"range": [400, 401],
-																			"loc": {
-																				"start": {
-																					"line": 16,
-																					"column": 21
-																				},
-																				"end": {
 																					"line": 16,
 																					"column": 22
+																				},
+																				"end": {
+																					"line": 16,
+																					"column": 25
 																				}
 																			}
 																		},
 																		{
 																			"children": [
 																				{
-																					"value": "fib",
-																					"type": "Fn::(Ident: &quot;fib&quot;)",
-																					"raw": "fib",
-																					"range": [401, 404],
+																					"value": "(",
+																					"type": "Punc::LeftParen",
+																					"raw": "(",
+																					"range": [404, 405],
 																					"loc": {
 																						"start": {
 																							"line": 16,
-																							"column": 22
+																							"column": 25
 																						},
 																						"end": {
 																							"line": 16,
-																							"column": 25
+																							"column": 26
 																						}
 																					}
 																				},
 																				{
 																					"children": [
 																						{
-																							"value": "(",
-																							"type": "Punc::LeftParen",
-																							"raw": "(",
-																							"range": [404, 405],
-																							"loc": {
-																								"start": {
-																									"line": 16,
-																									"column": 25
-																								},
-																								"end": {
-																									"line": 16,
-																									"column": 26
-																								}
-																							}
-																						},
-																						{
-																							"children": [
-																								{
-																									"value": "n",
-																									"type": "Marked::(Ident: &quot;n&quot;)",
-																									"raw": "n",
-																									"range": [405, 406],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 26
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 27
-																										}
-																									}
-																								},
-																								{
-																									"type": "Str",
-																									"raw": " ",
-																									"value": " ",
-																									"range": [406, 407],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 27
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 28
-																										}
-																									}
-																								},
-																								{
-																									"value": "-",
-																									"type": "Op::Minus",
-																									"raw": "-",
-																									"range": [407, 408],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 28
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 29
-																										}
-																									}
-																								},
-																								{
-																									"type": "Str",
-																									"raw": " ",
-																									"value": " ",
-																									"range": [408, 409],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 29
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 30
-																										}
-																									}
-																								},
-																								{
-																									"value": "2",
-																									"type": "Num(Int, 2)",
-																									"raw": "2",
-																									"range": [409, 410],
-																									"loc": {
-																										"start": {
-																											"line": 16,
-																											"column": 30
-																										},
-																										"end": {
-																											"line": 16,
-																											"column": 31
-																										}
-																									}
-																								}
-																							],
-																							"type": "Marked::Binary",
-																							"raw": "n - 2",
-																							"range": [405, 410],
+																							"value": "n",
+																							"type": "Marked::(Ident: &quot;n&quot;)",
+																							"raw": "n",
+																							"range": [405, 406],
 																							"loc": {
 																								"start": {
 																									"line": 16,
@@ -4098,34 +3987,98 @@
 																								},
 																								"end": {
 																									"line": 16,
-																									"column": 31
+																									"column": 27
 																								}
 																							}
 																						},
 																						{
-																							"value": ")",
-																							"type": "Punc::RightParen",
-																							"raw": ")",
-																							"range": [410, 411],
+																							"type": "Str",
+																							"raw": " ",
+																							"value": " ",
+																							"range": [406, 407],
 																							"loc": {
 																								"start": {
 																									"line": 16,
-																									"column": 31
+																									"column": 27
 																								},
 																								"end": {
 																									"line": 16,
-																									"column": 32
+																									"column": 28
+																								}
+																							}
+																						},
+																						{
+																							"value": "-",
+																							"type": "Op::Minus",
+																							"raw": "-",
+																							"range": [407, 408],
+																							"loc": {
+																								"start": {
+																									"line": 16,
+																									"column": 28
+																								},
+																								"end": {
+																									"line": 16,
+																									"column": 29
+																								}
+																							}
+																						},
+																						{
+																							"type": "Str",
+																							"raw": " ",
+																							"value": " ",
+																							"range": [408, 409],
+																							"loc": {
+																								"start": {
+																									"line": 16,
+																									"column": 29
+																								},
+																								"end": {
+																									"line": 16,
+																									"column": 30
+																								}
+																							}
+																						},
+																						{
+																							"value": "2",
+																							"type": "Num(Int, 2)",
+																							"raw": "2",
+																							"range": [409, 410],
+																							"loc": {
+																								"start": {
+																									"line": 16,
+																									"column": 30
+																								},
+																								"end": {
+																									"line": 16,
+																									"column": 31
 																								}
 																							}
 																						}
 																					],
-																					"type": "Marked::Args",
-																					"raw": "(n - 2)",
-																					"range": [404, 411],
+																					"type": "Marked::Binary",
+																					"raw": "n - 2",
+																					"range": [405, 410],
 																					"loc": {
 																						"start": {
 																							"line": 16,
-																							"column": 25
+																							"column": 26
+																						},
+																						"end": {
+																							"line": 16,
+																							"column": 31
+																						}
+																					}
+																				},
+																				{
+																					"value": ")",
+																					"type": "Punc::RightParen",
+																					"raw": ")",
+																					"range": [410, 411],
+																					"loc": {
+																						"start": {
+																							"line": 16,
+																							"column": 31
 																						},
 																						"end": {
 																							"line": 16,
@@ -4134,13 +4087,13 @@
 																					}
 																				}
 																			],
-																			"type": "Marked::FuncCall",
-																			"raw": "fib(n - 2)",
-																			"range": [401, 411],
+																			"type": "Marked::Args",
+																			"raw": "(n - 2)",
+																			"range": [404, 411],
 																			"loc": {
 																				"start": {
 																					"line": 16,
-																					"column": 22
+																					"column": 25
 																				},
 																				"end": {
 																					"line": 16,
@@ -4149,13 +4102,13 @@
 																			}
 																		}
 																	],
-																	"type": "Marked::Binary",
-																	"raw": "fib(n - 1) + fib(n - 2)",
-																	"range": [388, 411],
+																	"type": "Marked::FuncCall",
+																	"raw": "fib(n - 2)",
+																	"range": [401, 411],
 																	"loc": {
 																		"start": {
 																			"line": 16,
-																			"column": 9
+																			"column": 22
 																		},
 																		"end": {
 																			"line": 16,
@@ -4164,7 +4117,7 @@
 																	}
 																}
 															],
-															"type": "Marked::Code",
+															"type": "Marked::Binary",
 															"raw": "fib(n - 1) + fib(n - 2)",
 															"range": [388, 411],
 															"loc": {
@@ -4177,47 +4130,47 @@
 																	"column": 32
 																}
 															}
-														},
-														{
-															"type": "Str",
-															"raw": " ",
-															"value": " ",
-															"range": [411, 412],
-															"loc": {
-																"start": {
-																	"line": 16,
-																	"column": 32
-																},
-																"end": {
-																	"line": 16,
-																	"column": 33
-																}
-															}
-														},
-														{
-															"value": "}",
-															"type": "Punc::RightBrace",
-															"raw": "}",
-															"range": [412, 413],
-															"loc": {
-																"start": {
-																	"line": 16,
-																	"column": 33
-																},
-																"end": {
-																	"line": 16,
-																	"column": 34
-																}
-															}
 														}
 													],
-													"type": "Marked::CodeBlock",
-													"raw": "{ fib(n - 1) + fib(n - 2) }",
-													"range": [386, 413],
+													"type": "Marked::Code",
+													"raw": "fib(n - 1) + fib(n - 2)",
+													"range": [388, 411],
 													"loc": {
 														"start": {
 															"line": 16,
-															"column": 7
+															"column": 9
+														},
+														"end": {
+															"line": 16,
+															"column": 32
+														}
+													}
+												},
+												{
+													"type": "Str",
+													"raw": " ",
+													"value": " ",
+													"range": [411, 412],
+													"loc": {
+														"start": {
+															"line": 16,
+															"column": 32
+														},
+														"end": {
+															"line": 16,
+															"column": 33
+														}
+													}
+												},
+												{
+													"value": "}",
+													"type": "Punc::RightBrace",
+													"raw": "}",
+													"range": [412, 413],
+													"loc": {
+														"start": {
+															"line": 16,
+															"column": 33
 														},
 														"end": {
 															"line": 16,
@@ -4226,60 +4179,60 @@
 													}
 												}
 											],
-											"type": "Marked::Conditional",
-											"raw": "if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }",
-											"range": [365, 415],
+											"type": "Marked::CodeBlock",
+											"raw": "{ fib(n - 1) + fib(n - 2) }",
+											"range": [386, 413],
 											"loc": {
 												"start": {
-													"line": 15,
-													"column": 2
+													"line": 16,
+													"column": 7
 												},
 												"end": {
 													"line": 16,
 													"column": 34
-												}
-											}
-										},
-										{
-											"type": "Str",
-											"raw": "\n",
-											"value": "\n",
-											"range": [415, 416],
-											"loc": {
-												"start": {
-													"line": 16,
-													"column": 34
-												},
-												"end": {
-													"line": 17,
-													"column": 0
-												}
-											}
-										},
-										{
-											"value": ")",
-											"type": "Punc::RightParen",
-											"raw": ")",
-											"range": [416, 417],
-											"loc": {
-												"start": {
-													"line": 17,
-													"column": 0
-												},
-												"end": {
-													"line": 17,
-													"column": 1
 												}
 											}
 										}
 									],
-									"type": "Marked::Parenthesized",
-									"raw": "(\n  if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }\n)",
-									"range": [363, 419],
+									"type": "Marked::Conditional",
+									"raw": "if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }",
+									"range": [365, 415],
 									"loc": {
 										"start": {
-											"line": 14,
-											"column": 14
+											"line": 15,
+											"column": 2
+										},
+										"end": {
+											"line": 16,
+											"column": 34
+										}
+									}
+								},
+								{
+									"type": "Str",
+									"raw": "\n",
+									"value": "\n",
+									"range": [415, 416],
+									"loc": {
+										"start": {
+											"line": 16,
+											"column": 34
+										},
+										"end": {
+											"line": 17,
+											"column": 0
+										}
+									}
+								},
+								{
+									"value": ")",
+									"type": "Punc::RightParen",
+									"raw": ")",
+									"range": [416, 417],
+									"loc": {
+										"start": {
+											"line": 17,
+											"column": 0
 										},
 										"end": {
 											"line": 17,
@@ -4288,13 +4241,13 @@
 									}
 								}
 							],
-							"type": "Marked::Closure",
-							"raw": "fib(n) = (\n  if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }\n)",
-							"range": [354, 419],
+							"type": "Marked::Parenthesized",
+							"raw": "(\n  if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }\n)",
+							"range": [363, 419],
 							"loc": {
 								"start": {
 									"line": 14,
-									"column": 5
+									"column": 14
 								},
 								"end": {
 									"line": 17,
@@ -4303,13 +4256,13 @@
 							}
 						}
 					],
-					"type": "Marked::LetBinding",
-					"raw": "let fib(n) = (\n  if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }\n)",
-					"range": [350, 419],
+					"type": "Marked::Closure",
+					"raw": "fib(n) = (\n  if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }\n)",
+					"range": [354, 419],
 					"loc": {
 						"start": {
 							"line": 14,
-							"column": 1
+							"column": 5
 						},
 						"end": {
 							"line": 17,
@@ -4317,7 +4270,20 @@
 						}
 					}
 				}
-			]
+			],
+			"type": "Marked::LetBinding",
+			"raw": "let fib(n) = (\n  if n <= 2 { 1 }\n  else { fib(n - 1) + fib(n - 2) }\n)",
+			"range": [350, 419],
+			"loc": {
+				"start": {
+					"line": 14,
+					"column": 1
+				},
+				"end": {
+					"line": 17,
+					"column": 1
+				}
+			}
 		},
 		{
 			"value": "\n\n",
@@ -4481,242 +4447,164 @@
 			}
 		},
 		{
+			"value": "#",
+			"type": "Fn::(Hash: &quot;#&quot;)",
+			"raw": "#",
+			"range": [468, 469],
 			"loc": {
 				"start": {
 					"line": 21,
 					"column": 0
 				},
 				"end": {
-					"line": 25,
-					"column": 2
+					"line": 21,
+					"column": 1
 				}
-			},
-			"range": [468, 569],
-			"raw": "#align(center, table(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n))",
-			"type": "Paragraph",
+			}
+		},
+		{
 			"children": [
 				{
-					"value": "#",
-					"type": "Fn::(Hash: &quot;#&quot;)",
-					"raw": "#",
-					"range": [468, 469],
+					"value": "align",
+					"type": "Fn::(Ident: &quot;align&quot;)",
+					"raw": "align",
+					"range": [469, 474],
 					"loc": {
 						"start": {
 							"line": 21,
-							"column": 0
+							"column": 1
 						},
 						"end": {
 							"line": 21,
-							"column": 1
+							"column": 6
 						}
 					}
 				},
 				{
 					"children": [
 						{
-							"value": "align",
-							"type": "Fn::(Ident: &quot;align&quot;)",
-							"raw": "align",
-							"range": [469, 474],
+							"value": "(",
+							"type": "Punc::LeftParen",
+							"raw": "(",
+							"range": [474, 475],
 							"loc": {
 								"start": {
 									"line": 21,
-									"column": 1
+									"column": 6
 								},
 								"end": {
 									"line": 21,
-									"column": 6
+									"column": 7
+								}
+							}
+						},
+						{
+							"value": "center",
+							"type": "Marked::(Ident: &quot;center&quot;)",
+							"raw": "center",
+							"range": [475, 481],
+							"loc": {
+								"start": {
+									"line": 21,
+									"column": 7
+								},
+								"end": {
+									"line": 21,
+									"column": 13
+								}
+							}
+						},
+						{
+							"value": ",",
+							"type": "Punc::Comma",
+							"raw": ",",
+							"range": [481, 482],
+							"loc": {
+								"start": {
+									"line": 21,
+									"column": 13
+								},
+								"end": {
+									"line": 21,
+									"column": 14
+								}
+							}
+						},
+						{
+							"type": "Str",
+							"raw": " ",
+							"value": " ",
+							"range": [482, 483],
+							"loc": {
+								"start": {
+									"line": 21,
+									"column": 14
+								},
+								"end": {
+									"line": 21,
+									"column": 15
 								}
 							}
 						},
 						{
 							"children": [
 								{
-									"value": "(",
-									"type": "Punc::LeftParen",
-									"raw": "(",
-									"range": [474, 475],
+									"value": "table",
+									"type": "Fn::(Ident: &quot;table&quot;)",
+									"raw": "table",
+									"range": [483, 488],
 									"loc": {
 										"start": {
-											"line": 21,
-											"column": 6
-										},
-										"end": {
-											"line": 21,
-											"column": 7
-										}
-									}
-								},
-								{
-									"value": "center",
-									"type": "Marked::(Ident: &quot;center&quot;)",
-									"raw": "center",
-									"range": [475, 481],
-									"loc": {
-										"start": {
-											"line": 21,
-											"column": 7
-										},
-										"end": {
-											"line": 21,
-											"column": 13
-										}
-									}
-								},
-								{
-									"value": ",",
-									"type": "Punc::Comma",
-									"raw": ",",
-									"range": [481, 482],
-									"loc": {
-										"start": {
-											"line": 21,
-											"column": 13
-										},
-										"end": {
-											"line": 21,
-											"column": 14
-										}
-									}
-								},
-								{
-									"type": "Str",
-									"raw": " ",
-									"value": " ",
-									"range": [482, 483],
-									"loc": {
-										"start": {
-											"line": 21,
-											"column": 14
-										},
-										"end": {
 											"line": 21,
 											"column": 15
+										},
+										"end": {
+											"line": 21,
+											"column": 20
 										}
 									}
 								},
 								{
 									"children": [
 										{
-											"value": "table",
-											"type": "Fn::(Ident: &quot;table&quot;)",
-											"raw": "table",
-											"range": [483, 488],
+											"value": "(",
+											"type": "Punc::LeftParen",
+											"raw": "(",
+											"range": [488, 489],
 											"loc": {
 												"start": {
 													"line": 21,
-													"column": 15
+													"column": 20
 												},
 												"end": {
 													"line": 21,
-													"column": 20
+													"column": 21
+												}
+											}
+										},
+										{
+											"type": "Str",
+											"raw": "\n",
+											"value": "\n",
+											"range": [489, 490],
+											"loc": {
+												"start": {
+													"line": 21,
+													"column": 21
+												},
+												"end": {
+													"line": 22,
+													"column": 2
 												}
 											}
 										},
 										{
 											"children": [
 												{
-													"value": "(",
-													"type": "Punc::LeftParen",
-													"raw": "(",
-													"range": [488, 489],
-													"loc": {
-														"start": {
-															"line": 21,
-															"column": 20
-														},
-														"end": {
-															"line": 21,
-															"column": 21
-														}
-													}
-												},
-												{
-													"type": "Str",
-													"raw": "\n",
-													"value": "\n",
-													"range": [489, 490],
-													"loc": {
-														"start": {
-															"line": 21,
-															"column": 21
-														},
-														"end": {
-															"line": 22,
-															"column": 2
-														}
-													}
-												},
-												{
-													"children": [
-														{
-															"value": "columns",
-															"type": "Marked::(Ident: &quot;columns&quot;)",
-															"raw": "columns",
-															"range": [490, 497],
-															"loc": {
-																"start": {
-																	"line": 22,
-																	"column": 2
-																},
-																"end": {
-																	"line": 22,
-																	"column": 9
-																}
-															}
-														},
-														{
-															"value": ":",
-															"type": "Punc::Colon",
-															"raw": ":",
-															"range": [497, 498],
-															"loc": {
-																"start": {
-																	"line": 22,
-																	"column": 9
-																},
-																"end": {
-																	"line": 22,
-																	"column": 10
-																}
-															}
-														},
-														{
-															"type": "Str",
-															"raw": " ",
-															"value": " ",
-															"range": [498, 499],
-															"loc": {
-																"start": {
-																	"line": 22,
-																	"column": 10
-																},
-																"end": {
-																	"line": 22,
-																	"column": 11
-																}
-															}
-														},
-														{
-															"value": "count",
-															"type": "Marked::(Ident: &quot;count&quot;)",
-															"raw": "count",
-															"range": [499, 504],
-															"loc": {
-																"start": {
-																	"line": 22,
-																	"column": 11
-																},
-																"end": {
-																	"line": 22,
-																	"column": 16
-																}
-															}
-														}
-													],
-													"type": "Marked::Named",
-													"raw": "columns: count",
-													"range": [490, 504],
+													"value": "columns",
+													"type": "Marked::(Ident: &quot;columns&quot;)",
+													"raw": "columns",
+													"range": [490, 497],
 													"loc": {
 														"start": {
 															"line": 22,
@@ -4724,116 +4612,132 @@
 														},
 														"end": {
 															"line": 22,
-															"column": 16
+															"column": 9
 														}
 													}
 												},
 												{
-													"value": ",",
-													"type": "Punc::Comma",
-													"raw": ",",
-													"range": [504, 505],
+													"value": ":",
+													"type": "Punc::Colon",
+													"raw": ":",
+													"range": [497, 498],
 													"loc": {
 														"start": {
 															"line": 22,
-															"column": 16
+															"column": 9
 														},
 														"end": {
 															"line": 22,
-															"column": 17
+															"column": 10
 														}
 													}
 												},
 												{
 													"type": "Str",
-													"raw": "\n",
-													"value": "\n",
-													"range": [505, 506],
+													"raw": " ",
+													"value": " ",
+													"range": [498, 499],
 													"loc": {
 														"start": {
 															"line": 22,
-															"column": 17
+															"column": 10
+														},
+														"end": {
+															"line": 22,
+															"column": 11
+														}
+													}
+												},
+												{
+													"value": "count",
+													"type": "Marked::(Ident: &quot;count&quot;)",
+													"raw": "count",
+													"range": [499, 504],
+													"loc": {
+														"start": {
+															"line": 22,
+															"column": 11
+														},
+														"end": {
+															"line": 22,
+															"column": 16
+														}
+													}
+												}
+											],
+											"type": "Marked::Named",
+											"raw": "columns: count",
+											"range": [490, 504],
+											"loc": {
+												"start": {
+													"line": 22,
+													"column": 2
+												},
+												"end": {
+													"line": 22,
+													"column": 16
+												}
+											}
+										},
+										{
+											"value": ",",
+											"type": "Punc::Comma",
+											"raw": ",",
+											"range": [504, 505],
+											"loc": {
+												"start": {
+													"line": 22,
+													"column": 16
+												},
+												"end": {
+													"line": 22,
+													"column": 17
+												}
+											}
+										},
+										{
+											"type": "Str",
+											"raw": "\n",
+											"value": "\n",
+											"range": [505, 506],
+											"loc": {
+												"start": {
+													"line": 22,
+													"column": 17
+												},
+												"end": {
+													"line": 23,
+													"column": 2
+												}
+											}
+										},
+										{
+											"children": [
+												{
+													"value": "..",
+													"type": "Op::Dots",
+													"raw": "..",
+													"range": [506, 508],
+													"loc": {
+														"start": {
+															"line": 23,
+															"column": 2
 														},
 														"end": {
 															"line": 23,
-															"column": 2
+															"column": 4
 														}
 													}
 												},
 												{
 													"children": [
 														{
-															"value": "..",
-															"type": "Op::Dots",
-															"raw": "..",
-															"range": [506, 508],
-															"loc": {
-																"start": {
-																	"line": 23,
-																	"column": 2
-																},
-																"end": {
-																	"line": 23,
-																	"column": 4
-																}
-															}
-														},
-														{
 															"children": [
 																{
-																	"children": [
-																		{
-																			"value": "nums",
-																			"type": "Marked::(Ident: &quot;nums&quot;)",
-																			"raw": "nums",
-																			"range": [508, 512],
-																			"loc": {
-																				"start": {
-																					"line": 23,
-																					"column": 4
-																				},
-																				"end": {
-																					"line": 23,
-																					"column": 8
-																				}
-																			}
-																		},
-																		{
-																			"value": ".",
-																			"type": "Punc::Dot",
-																			"raw": ".",
-																			"range": [512, 513],
-																			"loc": {
-																				"start": {
-																					"line": 23,
-																					"column": 8
-																				},
-																				"end": {
-																					"line": 23,
-																					"column": 9
-																				}
-																			}
-																		},
-																		{
-																			"value": "map",
-																			"type": "Fn::(Ident: &quot;map&quot;)",
-																			"raw": "map",
-																			"range": [513, 516],
-																			"loc": {
-																				"start": {
-																					"line": 23,
-																					"column": 9
-																				},
-																				"end": {
-																					"line": 23,
-																					"column": 12
-																				}
-																			}
-																		}
-																	],
-																	"type": "Marked::FieldAccess",
-																	"raw": "nums.map",
-																	"range": [508, 516],
+																	"value": "nums",
+																	"type": "Marked::(Ident: &quot;nums&quot;)",
+																	"raw": "nums",
+																	"range": [508, 512],
 																	"loc": {
 																		"start": {
 																			"line": 23,
@@ -4841,50 +4745,82 @@
 																		},
 																		"end": {
 																			"line": 23,
+																			"column": 8
+																		}
+																	}
+																},
+																{
+																	"value": ".",
+																	"type": "Punc::Dot",
+																	"raw": ".",
+																	"range": [512, 513],
+																	"loc": {
+																		"start": {
+																			"line": 23,
+																			"column": 8
+																		},
+																		"end": {
+																			"line": 23,
+																			"column": 9
+																		}
+																	}
+																},
+																{
+																	"value": "map",
+																	"type": "Fn::(Ident: &quot;map&quot;)",
+																	"raw": "map",
+																	"range": [513, 516],
+																	"loc": {
+																		"start": {
+																			"line": 23,
+																			"column": 9
+																		},
+																		"end": {
+																			"line": 23,
 																			"column": 12
+																		}
+																	}
+																}
+															],
+															"type": "Marked::FieldAccess",
+															"raw": "nums.map",
+															"range": [508, 516],
+															"loc": {
+																"start": {
+																	"line": 23,
+																	"column": 4
+																},
+																"end": {
+																	"line": 23,
+																	"column": 12
+																}
+															}
+														},
+														{
+															"children": [
+																{
+																	"value": "(",
+																	"type": "Punc::LeftParen",
+																	"raw": "(",
+																	"range": [516, 517],
+																	"loc": {
+																		"start": {
+																			"line": 23,
+																			"column": 12
+																		},
+																		"end": {
+																			"line": 23,
+																			"column": 13
 																		}
 																	}
 																},
 																{
 																	"children": [
 																		{
-																			"value": "(",
-																			"type": "Punc::LeftParen",
-																			"raw": "(",
-																			"range": [516, 517],
-																			"loc": {
-																				"start": {
-																					"line": 23,
-																					"column": 12
-																				},
-																				"end": {
-																					"line": 23,
-																					"column": 13
-																				}
-																			}
-																		},
-																		{
 																			"children": [
 																				{
-																					"children": [
-																						{
-																							"value": "n",
-																							"type": "Marked::(Ident: &quot;n&quot;)",
-																							"raw": "n",
-																							"range": [517, 518],
-																							"loc": {
-																								"start": {
-																									"line": 23,
-																									"column": 13
-																								},
-																								"end": {
-																									"line": 23,
-																									"column": 14
-																								}
-																							}
-																						}
-																					],
-																					"type": "Marked::Params",
+																					"value": "n",
+																					"type": "Marked::(Ident: &quot;n&quot;)",
 																					"raw": "n",
 																					"range": [517, 518],
 																					"loc": {
@@ -4897,149 +4833,149 @@
 																							"column": 14
 																						}
 																					}
+																				}
+																			],
+																			"type": "Marked::Params",
+																			"raw": "n",
+																			"range": [517, 518],
+																			"loc": {
+																				"start": {
+																					"line": 23,
+																					"column": 13
 																				},
+																				"end": {
+																					"line": 23,
+																					"column": 14
+																				}
+																			}
+																		},
+																		{
+																			"type": "Str",
+																			"raw": " ",
+																			"value": " ",
+																			"range": [518, 519],
+																			"loc": {
+																				"start": {
+																					"line": 23,
+																					"column": 14
+																				},
+																				"end": {
+																					"line": 23,
+																					"column": 15
+																				}
+																			}
+																		},
+																		{
+																			"value": "=>",
+																			"type": "Op::Arrow",
+																			"raw": "=>",
+																			"range": [519, 521],
+																			"loc": {
+																				"start": {
+																					"line": 23,
+																					"column": 15
+																				},
+																				"end": {
+																					"line": 23,
+																					"column": 17
+																				}
+																			}
+																		},
+																		{
+																			"type": "Str",
+																			"raw": " ",
+																			"value": " ",
+																			"range": [521, 522],
+																			"loc": {
+																				"start": {
+																					"line": 23,
+																					"column": 17
+																				},
+																				"end": {
+																					"line": 23,
+																					"column": 18
+																				}
+																			}
+																		},
+																		{
+																			"children": [
 																				{
-																					"type": "Str",
-																					"raw": " ",
-																					"value": " ",
-																					"range": [518, 519],
+																					"value": "$",
+																					"type": "Marked::Dollar",
+																					"raw": "$",
+																					"range": [522, 523],
 																					"loc": {
 																						"start": {
-																							"line": 23,
-																							"column": 14
-																						},
-																						"end": {
-																							"line": 23,
-																							"column": 15
-																						}
-																					}
-																				},
-																				{
-																					"value": "=>",
-																					"type": "Op::Arrow",
-																					"raw": "=>",
-																					"range": [519, 521],
-																					"loc": {
-																						"start": {
-																							"line": 23,
-																							"column": 15
-																						},
-																						"end": {
-																							"line": 23,
-																							"column": 17
-																						}
-																					}
-																				},
-																				{
-																					"type": "Str",
-																					"raw": " ",
-																					"value": " ",
-																					"range": [521, 522],
-																					"loc": {
-																						"start": {
-																							"line": 23,
-																							"column": 17
-																						},
-																						"end": {
 																							"line": 23,
 																							"column": 18
+																						},
+																						"end": {
+																							"line": 23,
+																							"column": 19
 																						}
 																					}
 																				},
 																				{
 																					"children": [
 																						{
-																							"value": "$",
-																							"type": "Marked::Dollar",
-																							"raw": "$",
-																							"range": [522, 523],
-																							"loc": {
-																								"start": {
-																									"line": 23,
-																									"column": 18
-																								},
-																								"end": {
-																									"line": 23,
-																									"column": 19
-																								}
-																							}
-																						},
-																						{
 																							"children": [
 																								{
-																									"children": [
-																										{
-																											"value": "F",
-																											"type": "Str",
-																											"raw": "F",
-																											"range": [523, 524],
-																											"loc": {
-																												"start": {
-																													"line": 23,
-																													"column": 19
-																												},
-																												"end": {
-																													"line": 23,
-																													"column": 20
-																												}
-																											}
-																										},
-																										{
-																											"value": "_",
-																											"type": "Marked::Underscore",
-																											"raw": "_",
-																											"range": [524, 525],
-																											"loc": {
-																												"start": {
-																													"line": 23,
-																													"column": 20
-																												},
-																												"end": {
-																													"line": 23,
-																													"column": 21
-																												}
-																											}
-																										},
-																										{
-																											"value": "#",
-																											"type": "Var::(Hash: &quot;#&quot;)",
-																											"raw": "#",
-																											"range": [525, 526],
-																											"loc": {
-																												"start": {
-																													"line": 23,
-																													"column": 21
-																												},
-																												"end": {
-																													"line": 23,
-																													"column": 22
-																												}
-																											}
-																										},
-																										{
-																											"value": "n",
-																											"type": "Var::(Ident: &quot;n&quot;)",
-																											"raw": "n",
-																											"range": [526, 527],
-																											"loc": {
-																												"start": {
-																													"line": 23,
-																													"column": 22
-																												},
-																												"end": {
-																													"line": 23,
-																													"column": 23
-																												}
-																											}
-																										}
-																									],
-																									"type": "Marked::MathAttach",
-																									"raw": "F_#n",
-																									"range": [523, 527],
+																									"value": "F",
+																									"type": "Str",
+																									"raw": "F",
+																									"range": [523, 524],
 																									"loc": {
 																										"start": {
 																											"line": 23,
 																											"column": 19
+																										},
+																										"end": {
+																											"line": 23,
+																											"column": 20
+																										}
+																									}
+																								},
+																								{
+																									"value": "_",
+																									"type": "Marked::Underscore",
+																									"raw": "_",
+																									"range": [524, 525],
+																									"loc": {
+																										"start": {
+																											"line": 23,
+																											"column": 20
+																										},
+																										"end": {
+																											"line": 23,
+																											"column": 21
+																										}
+																									}
+																								},
+																								{
+																									"value": "#",
+																									"type": "Var::(Hash: &quot;#&quot;)",
+																									"raw": "#",
+																									"range": [525, 526],
+																									"loc": {
+																										"start": {
+																											"line": 23,
+																											"column": 21
+																										},
+																										"end": {
+																											"line": 23,
+																											"column": 22
+																										}
+																									}
+																								},
+																								{
+																									"value": "n",
+																									"type": "Var::(Ident: &quot;n&quot;)",
+																									"raw": "n",
+																									"range": [526, 527],
+																									"loc": {
+																										"start": {
+																											"line": 23,
+																											"column": 22
 																										},
 																										"end": {
 																											"line": 23,
@@ -5048,7 +4984,7 @@
 																									}
 																								}
 																							],
-																							"type": "Marked::Math",
+																							"type": "Marked::MathAttach",
 																							"raw": "F_#n",
 																							"range": [523, 527],
 																							"loc": {
@@ -5061,31 +4997,31 @@
 																									"column": 23
 																								}
 																							}
-																						},
-																						{
-																							"value": "$",
-																							"type": "Marked::Dollar",
-																							"raw": "$",
-																							"range": [527, 528],
-																							"loc": {
-																								"start": {
-																									"line": 23,
-																									"column": 23
-																								},
-																								"end": {
-																									"line": 23,
-																									"column": 24
-																								}
-																							}
 																						}
 																					],
-																					"type": "Marked::Equation",
-																					"raw": "$F_#n$",
-																					"range": [522, 528],
+																					"type": "Marked::Math",
+																					"raw": "F_#n",
+																					"range": [523, 527],
 																					"loc": {
 																						"start": {
 																							"line": 23,
-																							"column": 18
+																							"column": 19
+																						},
+																						"end": {
+																							"line": 23,
+																							"column": 23
+																						}
+																					}
+																				},
+																				{
+																					"value": "$",
+																					"type": "Marked::Dollar",
+																					"raw": "$",
+																					"range": [527, 528],
+																					"loc": {
+																						"start": {
+																							"line": 23,
+																							"column": 23
 																						},
 																						"end": {
 																							"line": 23,
@@ -5094,44 +5030,44 @@
 																					}
 																				}
 																			],
-																			"type": "Marked::Closure",
-																			"raw": "n => $F_#n$",
-																			"range": [517, 528],
+																			"type": "Marked::Equation",
+																			"raw": "$F_#n$",
+																			"range": [522, 528],
 																			"loc": {
 																				"start": {
 																					"line": 23,
-																					"column": 13
+																					"column": 18
 																				},
 																				"end": {
 																					"line": 23,
 																					"column": 24
-																				}
-																			}
-																		},
-																		{
-																			"value": ")",
-																			"type": "Punc::RightParen",
-																			"raw": ")",
-																			"range": [528, 529],
-																			"loc": {
-																				"start": {
-																					"line": 23,
-																					"column": 24
-																				},
-																				"end": {
-																					"line": 23,
-																					"column": 25
 																				}
 																			}
 																		}
 																	],
-																	"type": "Marked::Args",
-																	"raw": "(n => $F_#n$)",
-																	"range": [516, 529],
+																	"type": "Marked::Closure",
+																	"raw": "n => $F_#n$",
+																	"range": [517, 528],
 																	"loc": {
 																		"start": {
 																			"line": 23,
-																			"column": 12
+																			"column": 13
+																		},
+																		"end": {
+																			"line": 23,
+																			"column": 24
+																		}
+																	}
+																},
+																{
+																	"value": ")",
+																	"type": "Punc::RightParen",
+																	"raw": ")",
+																	"range": [528, 529],
+																	"loc": {
+																		"start": {
+																			"line": 23,
+																			"column": 24
 																		},
 																		"end": {
 																			"line": 23,
@@ -5140,13 +5076,13 @@
 																	}
 																}
 															],
-															"type": "Marked::FuncCall",
-															"raw": "nums.map(n => $F_#n$)",
-															"range": [508, 529],
+															"type": "Marked::Args",
+															"raw": "(n => $F_#n$)",
+															"range": [516, 529],
 															"loc": {
 																"start": {
 																	"line": 23,
-																	"column": 4
+																	"column": 12
 																},
 																"end": {
 																	"line": 23,
@@ -5155,126 +5091,94 @@
 															}
 														}
 													],
-													"type": "Marked::Spread",
-													"raw": "..nums.map(n => $F_#n$)",
-													"range": [506, 529],
+													"type": "Marked::FuncCall",
+													"raw": "nums.map(n => $F_#n$)",
+													"range": [508, 529],
 													"loc": {
 														"start": {
 															"line": 23,
+															"column": 4
+														},
+														"end": {
+															"line": 23,
+															"column": 25
+														}
+													}
+												}
+											],
+											"type": "Marked::Spread",
+											"raw": "..nums.map(n => $F_#n$)",
+											"range": [506, 529],
+											"loc": {
+												"start": {
+													"line": 23,
+													"column": 2
+												},
+												"end": {
+													"line": 23,
+													"column": 25
+												}
+											}
+										},
+										{
+											"value": ",",
+											"type": "Punc::Comma",
+											"raw": ",",
+											"range": [529, 530],
+											"loc": {
+												"start": {
+													"line": 23,
+													"column": 25
+												},
+												"end": {
+													"line": 23,
+													"column": 26
+												}
+											}
+										},
+										{
+											"type": "Str",
+											"raw": "\n",
+											"value": "\n",
+											"range": [530, 531],
+											"loc": {
+												"start": {
+													"line": 23,
+													"column": 26
+												},
+												"end": {
+													"line": 24,
+													"column": 2
+												}
+											}
+										},
+										{
+											"children": [
+												{
+													"value": "..",
+													"type": "Op::Dots",
+													"raw": "..",
+													"range": [531, 533],
+													"loc": {
+														"start": {
+															"line": 24,
 															"column": 2
-														},
-														"end": {
-															"line": 23,
-															"column": 25
-														}
-													}
-												},
-												{
-													"value": ",",
-													"type": "Punc::Comma",
-													"raw": ",",
-													"range": [529, 530],
-													"loc": {
-														"start": {
-															"line": 23,
-															"column": 25
-														},
-														"end": {
-															"line": 23,
-															"column": 26
-														}
-													}
-												},
-												{
-													"type": "Str",
-													"raw": "\n",
-													"value": "\n",
-													"range": [530, 531],
-													"loc": {
-														"start": {
-															"line": 23,
-															"column": 26
 														},
 														"end": {
 															"line": 24,
-															"column": 2
+															"column": 4
 														}
 													}
 												},
 												{
 													"children": [
 														{
-															"value": "..",
-															"type": "Op::Dots",
-															"raw": "..",
-															"range": [531, 533],
-															"loc": {
-																"start": {
-																	"line": 24,
-																	"column": 2
-																},
-																"end": {
-																	"line": 24,
-																	"column": 4
-																}
-															}
-														},
-														{
 															"children": [
 																{
-																	"children": [
-																		{
-																			"value": "nums",
-																			"type": "Marked::(Ident: &quot;nums&quot;)",
-																			"raw": "nums",
-																			"range": [533, 537],
-																			"loc": {
-																				"start": {
-																					"line": 24,
-																					"column": 4
-																				},
-																				"end": {
-																					"line": 24,
-																					"column": 8
-																				}
-																			}
-																		},
-																		{
-																			"value": ".",
-																			"type": "Punc::Dot",
-																			"raw": ".",
-																			"range": [537, 538],
-																			"loc": {
-																				"start": {
-																					"line": 24,
-																					"column": 8
-																				},
-																				"end": {
-																					"line": 24,
-																					"column": 9
-																				}
-																			}
-																		},
-																		{
-																			"value": "map",
-																			"type": "Fn::(Ident: &quot;map&quot;)",
-																			"raw": "map",
-																			"range": [538, 541],
-																			"loc": {
-																				"start": {
-																					"line": 24,
-																					"column": 9
-																				},
-																				"end": {
-																					"line": 24,
-																					"column": 12
-																				}
-																			}
-																		}
-																	],
-																	"type": "Marked::FieldAccess",
-																	"raw": "nums.map",
-																	"range": [533, 541],
+																	"value": "nums",
+																	"type": "Marked::(Ident: &quot;nums&quot;)",
+																	"raw": "nums",
+																	"range": [533, 537],
 																	"loc": {
 																		"start": {
 																			"line": 24,
@@ -5282,50 +5186,82 @@
 																		},
 																		"end": {
 																			"line": 24,
+																			"column": 8
+																		}
+																	}
+																},
+																{
+																	"value": ".",
+																	"type": "Punc::Dot",
+																	"raw": ".",
+																	"range": [537, 538],
+																	"loc": {
+																		"start": {
+																			"line": 24,
+																			"column": 8
+																		},
+																		"end": {
+																			"line": 24,
+																			"column": 9
+																		}
+																	}
+																},
+																{
+																	"value": "map",
+																	"type": "Fn::(Ident: &quot;map&quot;)",
+																	"raw": "map",
+																	"range": [538, 541],
+																	"loc": {
+																		"start": {
+																			"line": 24,
+																			"column": 9
+																		},
+																		"end": {
+																			"line": 24,
 																			"column": 12
+																		}
+																	}
+																}
+															],
+															"type": "Marked::FieldAccess",
+															"raw": "nums.map",
+															"range": [533, 541],
+															"loc": {
+																"start": {
+																	"line": 24,
+																	"column": 4
+																},
+																"end": {
+																	"line": 24,
+																	"column": 12
+																}
+															}
+														},
+														{
+															"children": [
+																{
+																	"value": "(",
+																	"type": "Punc::LeftParen",
+																	"raw": "(",
+																	"range": [541, 542],
+																	"loc": {
+																		"start": {
+																			"line": 24,
+																			"column": 12
+																		},
+																		"end": {
+																			"line": 24,
+																			"column": 13
 																		}
 																	}
 																},
 																{
 																	"children": [
 																		{
-																			"value": "(",
-																			"type": "Punc::LeftParen",
-																			"raw": "(",
-																			"range": [541, 542],
-																			"loc": {
-																				"start": {
-																					"line": 24,
-																					"column": 12
-																				},
-																				"end": {
-																					"line": 24,
-																					"column": 13
-																				}
-																			}
-																		},
-																		{
 																			"children": [
 																				{
-																					"children": [
-																						{
-																							"value": "n",
-																							"type": "Marked::(Ident: &quot;n&quot;)",
-																							"raw": "n",
-																							"range": [542, 543],
-																							"loc": {
-																								"start": {
-																									"line": 24,
-																									"column": 13
-																								},
-																								"end": {
-																									"line": 24,
-																									"column": 14
-																								}
-																							}
-																						}
-																					],
-																					"type": "Marked::Params",
+																					"value": "n",
+																					"type": "Marked::(Ident: &quot;n&quot;)",
 																					"raw": "n",
 																					"range": [542, 543],
 																					"loc": {
@@ -5338,167 +5274,167 @@
 																							"column": 14
 																						}
 																					}
+																				}
+																			],
+																			"type": "Marked::Params",
+																			"raw": "n",
+																			"range": [542, 543],
+																			"loc": {
+																				"start": {
+																					"line": 24,
+																					"column": 13
 																				},
+																				"end": {
+																					"line": 24,
+																					"column": 14
+																				}
+																			}
+																		},
+																		{
+																			"type": "Str",
+																			"raw": " ",
+																			"value": " ",
+																			"range": [543, 544],
+																			"loc": {
+																				"start": {
+																					"line": 24,
+																					"column": 14
+																				},
+																				"end": {
+																					"line": 24,
+																					"column": 15
+																				}
+																			}
+																		},
+																		{
+																			"value": "=>",
+																			"type": "Op::Arrow",
+																			"raw": "=>",
+																			"range": [544, 546],
+																			"loc": {
+																				"start": {
+																					"line": 24,
+																					"column": 15
+																				},
+																				"end": {
+																					"line": 24,
+																					"column": 17
+																				}
+																			}
+																		},
+																		{
+																			"type": "Str",
+																			"raw": " ",
+																			"value": " ",
+																			"range": [546, 547],
+																			"loc": {
+																				"start": {
+																					"line": 24,
+																					"column": 17
+																				},
+																				"end": {
+																					"line": 24,
+																					"column": 18
+																				}
+																			}
+																		},
+																		{
+																			"children": [
 																				{
-																					"type": "Str",
-																					"raw": " ",
-																					"value": " ",
-																					"range": [543, 544],
+																					"value": "str",
+																					"type": "Fn::(Ident: &quot;str&quot;)",
+																					"raw": "str",
+																					"range": [547, 550],
 																					"loc": {
 																						"start": {
-																							"line": 24,
-																							"column": 14
-																						},
-																						"end": {
-																							"line": 24,
-																							"column": 15
-																						}
-																					}
-																				},
-																				{
-																					"value": "=>",
-																					"type": "Op::Arrow",
-																					"raw": "=>",
-																					"range": [544, 546],
-																					"loc": {
-																						"start": {
-																							"line": 24,
-																							"column": 15
-																						},
-																						"end": {
-																							"line": 24,
-																							"column": 17
-																						}
-																					}
-																				},
-																				{
-																					"type": "Str",
-																					"raw": " ",
-																					"value": " ",
-																					"range": [546, 547],
-																					"loc": {
-																						"start": {
-																							"line": 24,
-																							"column": 17
-																						},
-																						"end": {
 																							"line": 24,
 																							"column": 18
+																						},
+																						"end": {
+																							"line": 24,
+																							"column": 21
 																						}
 																					}
 																				},
 																				{
 																					"children": [
 																						{
-																							"value": "str",
-																							"type": "Fn::(Ident: &quot;str&quot;)",
-																							"raw": "str",
-																							"range": [547, 550],
+																							"value": "(",
+																							"type": "Punc::LeftParen",
+																							"raw": "(",
+																							"range": [550, 551],
 																							"loc": {
 																								"start": {
 																									"line": 24,
-																									"column": 18
+																									"column": 21
 																								},
 																								"end": {
 																									"line": 24,
-																									"column": 21
+																									"column": 22
 																								}
 																							}
 																						},
 																						{
 																							"children": [
 																								{
-																									"value": "(",
-																									"type": "Punc::LeftParen",
-																									"raw": "(",
-																									"range": [550, 551],
+																									"value": "fib",
+																									"type": "Fn::(Ident: &quot;fib&quot;)",
+																									"raw": "fib",
+																									"range": [551, 554],
 																									"loc": {
 																										"start": {
 																											"line": 24,
-																											"column": 21
+																											"column": 22
 																										},
 																										"end": {
 																											"line": 24,
-																											"column": 22
+																											"column": 25
 																										}
 																									}
 																								},
 																								{
 																									"children": [
 																										{
-																											"value": "fib",
-																											"type": "Fn::(Ident: &quot;fib&quot;)",
-																											"raw": "fib",
-																											"range": [551, 554],
+																											"value": "(",
+																											"type": "Punc::LeftParen",
+																											"raw": "(",
+																											"range": [554, 555],
 																											"loc": {
 																												"start": {
 																													"line": 24,
-																													"column": 22
+																													"column": 25
 																												},
 																												"end": {
 																													"line": 24,
-																													"column": 25
+																													"column": 26
 																												}
 																											}
 																										},
 																										{
-																											"children": [
-																												{
-																													"value": "(",
-																													"type": "Punc::LeftParen",
-																													"raw": "(",
-																													"range": [554, 555],
-																													"loc": {
-																														"start": {
-																															"line": 24,
-																															"column": 25
-																														},
-																														"end": {
-																															"line": 24,
-																															"column": 26
-																														}
-																													}
-																												},
-																												{
-																													"value": "n",
-																													"type": "Marked::(Ident: &quot;n&quot;)",
-																													"raw": "n",
-																													"range": [555, 556],
-																													"loc": {
-																														"start": {
-																															"line": 24,
-																															"column": 26
-																														},
-																														"end": {
-																															"line": 24,
-																															"column": 27
-																														}
-																													}
-																												},
-																												{
-																													"value": ")",
-																													"type": "Punc::RightParen",
-																													"raw": ")",
-																													"range": [556, 557],
-																													"loc": {
-																														"start": {
-																															"line": 24,
-																															"column": 27
-																														},
-																														"end": {
-																															"line": 24,
-																															"column": 28
-																														}
-																													}
-																												}
-																											],
-																											"type": "Marked::Args",
-																											"raw": "(n)",
-																											"range": [554, 557],
+																											"value": "n",
+																											"type": "Marked::(Ident: &quot;n&quot;)",
+																											"raw": "n",
+																											"range": [555, 556],
 																											"loc": {
 																												"start": {
 																													"line": 24,
-																													"column": 25
+																													"column": 26
+																												},
+																												"end": {
+																													"line": 24,
+																													"column": 27
+																												}
+																											}
+																										},
+																										{
+																											"value": ")",
+																											"type": "Punc::RightParen",
+																											"raw": ")",
+																											"range": [556, 557],
+																											"loc": {
+																												"start": {
+																													"line": 24,
+																													"column": 27
 																												},
 																												"end": {
 																													"line": 24,
@@ -5507,44 +5443,44 @@
 																											}
 																										}
 																									],
-																									"type": "Marked::FuncCall",
-																									"raw": "fib(n)",
-																									"range": [551, 557],
+																									"type": "Marked::Args",
+																									"raw": "(n)",
+																									"range": [554, 557],
 																									"loc": {
 																										"start": {
 																											"line": 24,
-																											"column": 22
+																											"column": 25
 																										},
 																										"end": {
 																											"line": 24,
 																											"column": 28
-																										}
-																									}
-																								},
-																								{
-																									"value": ")",
-																									"type": "Punc::RightParen",
-																									"raw": ")",
-																									"range": [557, 558],
-																									"loc": {
-																										"start": {
-																											"line": 24,
-																											"column": 28
-																										},
-																										"end": {
-																											"line": 24,
-																											"column": 29
 																										}
 																									}
 																								}
 																							],
-																							"type": "Marked::Args",
-																							"raw": "(fib(n))",
-																							"range": [550, 558],
+																							"type": "Marked::FuncCall",
+																							"raw": "fib(n)",
+																							"range": [551, 557],
 																							"loc": {
 																								"start": {
 																									"line": 24,
-																									"column": 21
+																									"column": 22
+																								},
+																								"end": {
+																									"line": 24,
+																									"column": 28
+																								}
+																							}
+																						},
+																						{
+																							"value": ")",
+																							"type": "Punc::RightParen",
+																							"raw": ")",
+																							"range": [557, 558],
+																							"loc": {
+																								"start": {
+																									"line": 24,
+																									"column": 28
 																								},
 																								"end": {
 																									"line": 24,
@@ -5553,13 +5489,13 @@
 																							}
 																						}
 																					],
-																					"type": "Marked::FuncCall",
-																					"raw": "str(fib(n))",
-																					"range": [547, 558],
+																					"type": "Marked::Args",
+																					"raw": "(fib(n))",
+																					"range": [550, 558],
 																					"loc": {
 																						"start": {
 																							"line": 24,
-																							"column": 18
+																							"column": 21
 																						},
 																						"end": {
 																							"line": 24,
@@ -5568,44 +5504,44 @@
 																					}
 																				}
 																			],
-																			"type": "Marked::Closure",
-																			"raw": "n => str(fib(n))",
-																			"range": [542, 558],
+																			"type": "Marked::FuncCall",
+																			"raw": "str(fib(n))",
+																			"range": [547, 558],
 																			"loc": {
 																				"start": {
 																					"line": 24,
-																					"column": 13
+																					"column": 18
 																				},
 																				"end": {
 																					"line": 24,
 																					"column": 29
-																				}
-																			}
-																		},
-																		{
-																			"value": ")",
-																			"type": "Punc::RightParen",
-																			"raw": ")",
-																			"range": [558, 559],
-																			"loc": {
-																				"start": {
-																					"line": 24,
-																					"column": 29
-																				},
-																				"end": {
-																					"line": 24,
-																					"column": 30
 																				}
 																			}
 																		}
 																	],
-																	"type": "Marked::Args",
-																	"raw": "(n => str(fib(n)))",
-																	"range": [541, 559],
+																	"type": "Marked::Closure",
+																	"raw": "n => str(fib(n))",
+																	"range": [542, 558],
 																	"loc": {
 																		"start": {
 																			"line": 24,
-																			"column": 12
+																			"column": 13
+																		},
+																		"end": {
+																			"line": 24,
+																			"column": 29
+																		}
+																	}
+																},
+																{
+																	"value": ")",
+																	"type": "Punc::RightParen",
+																	"raw": ")",
+																	"range": [558, 559],
+																	"loc": {
+																		"start": {
+																			"line": 24,
+																			"column": 29
 																		},
 																		"end": {
 																			"line": 24,
@@ -5614,13 +5550,13 @@
 																	}
 																}
 															],
-															"type": "Marked::FuncCall",
-															"raw": "nums.map(n => str(fib(n)))",
-															"range": [533, 559],
+															"type": "Marked::Args",
+															"raw": "(n => str(fib(n)))",
+															"range": [541, 559],
 															"loc": {
 																"start": {
 																	"line": 24,
-																	"column": 4
+																	"column": 12
 																},
 																"end": {
 																	"line": 24,
@@ -5629,76 +5565,76 @@
 															}
 														}
 													],
-													"type": "Marked::Spread",
-													"raw": "..nums.map(n => str(fib(n)))",
-													"range": [531, 559],
+													"type": "Marked::FuncCall",
+													"raw": "nums.map(n => str(fib(n)))",
+													"range": [533, 559],
 													"loc": {
 														"start": {
 															"line": 24,
-															"column": 2
+															"column": 4
 														},
 														"end": {
 															"line": 24,
 															"column": 30
-														}
-													}
-												},
-												{
-													"value": ",",
-													"type": "Punc::Comma",
-													"raw": ",",
-													"range": [559, 560],
-													"loc": {
-														"start": {
-															"line": 24,
-															"column": 30
-														},
-														"end": {
-															"line": 24,
-															"column": 31
-														}
-													}
-												},
-												{
-													"type": "Str",
-													"raw": "\n",
-													"value": "\n",
-													"range": [560, 561],
-													"loc": {
-														"start": {
-															"line": 24,
-															"column": 31
-														},
-														"end": {
-															"line": 25,
-															"column": 0
-														}
-													}
-												},
-												{
-													"value": ")",
-													"type": "Punc::RightParen",
-													"raw": ")",
-													"range": [561, 562],
-													"loc": {
-														"start": {
-															"line": 25,
-															"column": 0
-														},
-														"end": {
-															"line": 25,
-															"column": 1
 														}
 													}
 												}
 											],
-											"type": "Marked::Args",
-											"raw": "(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n)",
-											"range": [488, 568],
+											"type": "Marked::Spread",
+											"raw": "..nums.map(n => str(fib(n)))",
+											"range": [531, 559],
 											"loc": {
 												"start": {
-													"line": 21,
-													"column": 20
+													"line": 24,
+													"column": 2
+												},
+												"end": {
+													"line": 24,
+													"column": 30
+												}
+											}
+										},
+										{
+											"value": ",",
+											"type": "Punc::Comma",
+											"raw": ",",
+											"range": [559, 560],
+											"loc": {
+												"start": {
+													"line": 24,
+													"column": 30
+												},
+												"end": {
+													"line": 24,
+													"column": 31
+												}
+											}
+										},
+										{
+											"type": "Str",
+											"raw": "\n",
+											"value": "\n",
+											"range": [560, 561],
+											"loc": {
+												"start": {
+													"line": 24,
+													"column": 31
+												},
+												"end": {
+													"line": 25,
+													"column": 0
+												}
+											}
+										},
+										{
+											"value": ")",
+											"type": "Punc::RightParen",
+											"raw": ")",
+											"range": [561, 562],
+											"loc": {
+												"start": {
+													"line": 25,
+													"column": 0
 												},
 												"end": {
 													"line": 25,
@@ -5707,44 +5643,44 @@
 											}
 										}
 									],
-									"type": "Marked::FuncCall",
-									"raw": "table(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n)",
-									"range": [483, 568],
+									"type": "Marked::Args",
+									"raw": "(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n)",
+									"range": [488, 568],
 									"loc": {
 										"start": {
 											"line": 21,
-											"column": 15
+											"column": 20
 										},
 										"end": {
 											"line": 25,
 											"column": 1
-										}
-									}
-								},
-								{
-									"value": ")",
-									"type": "Punc::RightParen",
-									"raw": ")",
-									"range": [568, 569],
-									"loc": {
-										"start": {
-											"line": 25,
-											"column": 1
-										},
-										"end": {
-											"line": 25,
-											"column": 2
 										}
 									}
 								}
 							],
-							"type": "Marked::Args",
-							"raw": "(center, table(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n))",
-							"range": [474, 569],
+							"type": "Marked::FuncCall",
+							"raw": "table(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n)",
+							"range": [483, 568],
 							"loc": {
 								"start": {
 									"line": 21,
-									"column": 6
+									"column": 15
+								},
+								"end": {
+									"line": 25,
+									"column": 1
+								}
+							}
+						},
+						{
+							"value": ")",
+							"type": "Punc::RightParen",
+							"raw": ")",
+							"range": [568, 569],
+							"loc": {
+								"start": {
+									"line": 25,
+									"column": 1
 								},
 								"end": {
 									"line": 25,
@@ -5753,13 +5689,13 @@
 							}
 						}
 					],
-					"type": "Marked::FuncCall",
-					"raw": "align(center, table(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n))",
-					"range": [469, 569],
+					"type": "Marked::Args",
+					"raw": "(center, table(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n))",
+					"range": [474, 569],
 					"loc": {
 						"start": {
 							"line": 21,
-							"column": 1
+							"column": 6
 						},
 						"end": {
 							"line": 25,
@@ -5767,7 +5703,20 @@
 						}
 					}
 				}
-			]
+			],
+			"type": "Marked::FuncCall",
+			"raw": "align(center, table(\n  columns: count,\n  ..nums.map(n => $F_#n$),\n  ..nums.map(n => str(fib(n))),\n))",
+			"range": [469, 569],
+			"loc": {
+				"start": {
+					"line": 21,
+					"column": 1
+				},
+				"end": {
+					"line": 25,
+					"column": 2
+				}
+			}
 		},
 		{
 			"value": "\n\n",

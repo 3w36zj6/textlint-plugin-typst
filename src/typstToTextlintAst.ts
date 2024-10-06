@@ -320,6 +320,11 @@ export const paragraphizeTextlintAstObject = (
 		const headNode = paragraph[0];
 		const lastNode = paragraph[paragraph.length - 1];
 
+		if (["Kw::Hash", "Fn::(Hash: &quot;#&quot;)"].includes(headNode.type)) {
+			children.push(...paragraph);
+			return;
+		}
+
 		children.push({
 			loc: {
 				start: headNode.loc.start,
