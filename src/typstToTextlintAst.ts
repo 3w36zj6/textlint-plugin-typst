@@ -203,6 +203,7 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 		if (node.c && node.c.length > 0) {
 			// If TxtParentNode
 			let childOffset = startOffset;
+			const whitespaceNodes: TxtTextNode[] = [];
 			const softBreakNodes: TxtTextNode[] = [];
 			for (
 				let nodeChildIndex = 0;
@@ -212,6 +213,7 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 				const child = node.c[nodeChildIndex];
 				childOffset = calculateOffsets(child, childOffset);
 
+				// Check between child nodes
 				if (nodeChildIndex < node.c.length - 1) {
 					const nextChild = node.c[nodeChildIndex + 1];
 
@@ -222,6 +224,26 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 					const nextStartColumn = extractLocation(nextChild.s, nextChild.c)
 						.start.column;
 
+					// whitespace
+					if (
+						currentEndLine === nextStartLine &&
+						currentEndColumn !== nextStartColumn
+					) {
+						const whitespaceNode: TxtTextNode = {
+							type: "Str",
+							raw: " ".repeat(nextStartColumn - currentEndColumn),
+							value: " ".repeat(nextStartColumn - currentEndColumn),
+							range: [childOffset, childOffset + 1],
+							loc: {
+								start: { line: currentEndLine, column: currentEndColumn },
+								end: { line: nextStartLine, column: nextStartColumn },
+							},
+						};
+						whitespaceNodes.push(whitespaceNode);
+						childOffset += 1;
+					}
+
+					// soft breaks
 					if (
 						currentEndLine !== nextStartLine &&
 						child.type !== ASTNodeTypes.Break &&
@@ -246,6 +268,8 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 			node.c = node.c
 				// @ts-expect-error
 				.concat(softBreakNodes)
+				// @ts-expect-error
+				.concat(whitespaceNodes)
 				.sort((a, b) => a.range[0] - b.range[0]);
 			node.children = node.c as Content[];
 		} else {
