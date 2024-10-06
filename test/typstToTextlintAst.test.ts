@@ -8,6 +8,7 @@ import {
 	convertTypstSourceToTextlintAstObject,
 	extractRawSourceByLocation,
 	getRawTypstAstString,
+	paragraphizeTextlintAstObject,
 } from "../src/typstToTextlintAst";
 
 const typstSource = fs.readFileSync(
@@ -25,6 +26,13 @@ const rawTypstAstObject = JSON.parse(
 
 const textlintAstObject = JSON.parse(
 	fs.readFileSync(path.join(__dirname, "textlintAstObject.json"), "utf-8"),
+);
+
+const paragraphizedTextlintAstObject = JSON.parse(
+	fs.readFileSync(
+		path.join(__dirname, "paragraphizedTextlintAstObject.json"),
+		"utf-8",
+	),
 );
 
 describe("getRawTypstAstString", () => {
@@ -81,11 +89,24 @@ describe("convertRawTypstAstObjectToTextlintAstObject", () => {
 	});
 });
 
-describe("convertTypstSourceToTextlintAstObject", () => {
+describe("paragraphizeTextlintAstObject", () => {
+	it("should convert textlint AST object to paragraphized textlint AST object", async () => {
+		const actualParagraphizedTextlintAstObject =
+			await paragraphizeTextlintAstObject(textlintAstObject);
+		expect(actualParagraphizedTextlintAstObject).toStrictEqual(
+			paragraphizedTextlintAstObject,
+		);
+		ASTTester.test(actualParagraphizedTextlintAstObject);
+	});
+});
+
+describe("convertTypstSourceToParagraphizedTextlintAstObject", () => {
 	it("should convert Typst source to textlint AST object", async () => {
 		const actualTextlintAstObject =
 			await convertTypstSourceToTextlintAstObject(typstSource);
-		expect(actualTextlintAstObject).toStrictEqual(textlintAstObject);
+		expect(actualTextlintAstObject).toStrictEqual(
+			paragraphizedTextlintAstObject,
+		);
 		ASTTester.test(actualTextlintAstObject);
 	});
 });

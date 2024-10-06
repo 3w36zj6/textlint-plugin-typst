@@ -304,6 +304,53 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 };
 
 /**
+ * Paragraphize a textlint AST object.
+ * @param rootNode The textlint AST object.
+ * @returns The paragraphized textlint AST object.
+ */
+export const paragraphizeTextlintAstObject = (
+	rootNode: TxtDocumentNode,
+): TxtDocumentNode => {
+	const children: Content[] = [];
+	let paragraph: Content[] = [];
+
+	const pushChild = (paragraph: Content[]) => {
+		if (paragraph.length === 0) return;
+
+		const headNode = paragraph[0];
+		const lastNode = paragraph[paragraph.length - 1];
+
+		children.push({
+			loc: {
+				start: headNode.loc.start,
+				end: lastNode.loc.end,
+			},
+			range: [headNode.range[0], lastNode.range[1]],
+			raw: paragraph.map((node) => node.raw).join(""),
+			type: ASTNodeTypes.Paragraph,
+			// @ts-expect-error
+			children: paragraph,
+		});
+	};
+
+	for (const node of rootNode.children) {
+		switch (node.type) {
+			case ASTNodeTypes.Header:
+			case ASTNodeTypes.Break:
+				pushChild(paragraph);
+				paragraph = [];
+				children.push(node);
+				break;
+			default:
+				paragraph.push(node);
+		}
+	}
+	pushChild(paragraph);
+
+	return { ...rootNode, children };
+};
+
+/**
  * Convert a Typst source code to a textlint AST object.
  * @param typstSource The Typst source code.
  * @returns The textlint AST object.
@@ -317,5 +364,7 @@ export const convertTypstSourceToTextlintAstObject = async (
 		rawTypstAstObject,
 		typstSource,
 	);
-	return textlintAstObject as TxtDocumentNode;
+	const paragraphizedTextlintAstObject =
+		paragraphizeTextlintAstObject(textlintAstObject);
+	return paragraphizedTextlintAstObject as TxtDocumentNode;
 };
