@@ -1,0 +1,163 @@
+{
+	"children": [
+		{
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 13
+				}
+			},
+			"range": [0, 13],
+			"raw": "`inline code`",
+			"type": "Paragraph",
+			"children": [
+				{
+					"type": "Code",
+					"raw": "`inline code`",
+					"range": [0, 13],
+					"loc": {
+						"start": {
+							"line": 1,
+							"column": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 13
+						}
+					},
+					"value": "inline code"
+				}
+			]
+		},
+		{
+			"value": "\n\n",
+			"type": "Break",
+			"raw": "\n\n",
+			"range": [13, 15],
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 13
+				},
+				"end": {
+					"line": 3,
+					"column": 0
+				}
+			}
+		},
+		{
+			"loc": {
+				"start": {
+					"line": 3,
+					"column": 0
+				},
+				"end": {
+					"line": 3,
+					"column": 21
+				}
+			},
+			"range": [15, 36],
+			"raw": "aaa `inline code` bbb",
+			"type": "Paragraph",
+			"children": [
+				{
+					"value": "aaa",
+					"type": "Str",
+					"raw": "aaa",
+					"range": [15, 18],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 0
+						},
+						"end": {
+							"line": 3,
+							"column": 3
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [18, 19],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 3
+						},
+						"end": {
+							"line": 3,
+							"column": 4
+						}
+					}
+				},
+				{
+					"type": "Code",
+					"raw": "`inline code`",
+					"range": [19, 32],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 4
+						},
+						"end": {
+							"line": 3,
+							"column": 17
+						}
+					},
+					"value": "inline code"
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [32, 33],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 17
+						},
+						"end": {
+							"line": 3,
+							"column": 18
+						}
+					}
+				},
+				{
+					"value": "bbb",
+					"type": "Str",
+					"raw": "bbb",
+					"range": [33, 36],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 18
+						},
+						"end": {
+							"line": 3,
+							"column": 21
+						}
+					}
+				}
+			]
+		}
+	],
+	"type": "Document",
+	"raw": "`inline code`\n\naaa `inline code` bbb",
+	"range": [0, 36],
+	"loc": {
+		"start": {
+			"line": 1,
+			"column": 0
+		},
+		"end": {
+			"line": 3,
+			"column": 21
+		}
+	}
+}

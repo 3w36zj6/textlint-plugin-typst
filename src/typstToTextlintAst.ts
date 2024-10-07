@@ -298,6 +298,28 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 		node.range = [startOffset, endOffset];
 		node.loc = location;
 
+		if (node.type === "Marked::Raw") {
+			if (node.loc.start.line === node.loc.end.line) {
+				// If Code
+				node.type = ASTNodeTypes.Code;
+				node.value = node.raw.replace(/`([\s\S]*?)`/, "$1");
+			} else {
+				// If CodeBlock
+				node.type = ASTNodeTypes.CodeBlock;
+				node.value = node.raw.replace(/```(?:\w*)\n([\s\S]*?)\n```/, "$1");
+
+				// @ts-expect-error
+				node.lang =
+					// @ts-expect-error
+					node.children[1].type === "Marked::RawLang"
+						? // @ts-expect-error
+							node.children[1].value
+						: null;
+			}
+			// biome-ignore lint/performance/noDelete: Convert TxtParentNode to TxtTextNode
+			delete node.children;
+		}
+
 		// @ts-expect-error
 		// biome-ignore lint/performance/noDelete: Typst AST object requires 's' property but textlint AST object does not.
 		delete node.s;
@@ -354,6 +376,7 @@ export const paragraphizeTextlintAstObject = (
 		switch (node.type) {
 			case ASTNodeTypes.Header:
 			case ASTNodeTypes.Break:
+			case ASTNodeTypes.CodeBlock:
 				pushChild(paragraph);
 				paragraph = [];
 				children.push(node);
