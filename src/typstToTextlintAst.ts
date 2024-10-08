@@ -324,6 +324,24 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 			// biome-ignore lint/performance/noDelete: Convert TxtParentNode to TxtTextNode
 			delete node.children;
 		}
+		if (node.type === "Marked::Link") {
+			node.type = ASTNodeTypes.Link;
+			// @ts-expect-error
+			node.title = null;
+			// @ts-expect-error
+			node.url = node.value;
+			node.children = [
+				{
+					type: ASTNodeTypes.Str,
+					value: node.raw,
+					loc: node.loc,
+					range: node.range,
+					raw: node.raw,
+				},
+			];
+			// biome-ignore lint/performance/noDelete: Marked::Link node have value property but textlint AST object does not.
+			delete node.value;
+		}
 
 		// @ts-expect-error
 		// biome-ignore lint/performance/noDelete: Typst AST object requires 's' property but textlint AST object does not.
