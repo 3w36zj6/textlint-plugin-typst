@@ -34,41 +34,7 @@
 							}
 						},
 						{
-							"children": [
-								{
-									"value": "Date",
-									"type": "Str",
-									"raw": "Date",
-									"range": [1, 5],
-									"loc": {
-										"start": {
-											"line": 1,
-											"column": 1
-										},
-										"end": {
-											"line": 1,
-											"column": 5
-										}
-									}
-								},
-								{
-									"value": ":",
-									"type": "Str",
-									"raw": ":",
-									"range": [5, 6],
-									"loc": {
-										"start": {
-											"line": 1,
-											"column": 5
-										},
-										"end": {
-											"line": 1,
-											"column": 6
-										}
-									}
-								}
-							],
-							"type": "Marked::Markup",
+							"type": "Str",
 							"raw": "Date:",
 							"range": [1, 6],
 							"loc": {
@@ -80,7 +46,8 @@
 									"line": 1,
 									"column": 6
 								}
-							}
+							},
+							"value": "Date"
 						},
 						{
 							"value": "*",
@@ -99,7 +66,7 @@
 							}
 						}
 					],
-					"type": "Marked::Strong",
+					"type": "Strong",
 					"raw": "*Date:*",
 					"range": [0, 7],
 					"loc": {
@@ -213,41 +180,7 @@
 							}
 						},
 						{
-							"children": [
-								{
-									"value": "Topic",
-									"type": "Str",
-									"raw": "Topic",
-									"range": [21, 26],
-									"loc": {
-										"start": {
-											"line": 2,
-											"column": 1
-										},
-										"end": {
-											"line": 2,
-											"column": 6
-										}
-									}
-								},
-								{
-									"value": ":",
-									"type": "Str",
-									"raw": ":",
-									"range": [26, 27],
-									"loc": {
-										"start": {
-											"line": 2,
-											"column": 6
-										},
-										"end": {
-											"line": 2,
-											"column": 7
-										}
-									}
-								}
-							],
-							"type": "Marked::Markup",
+							"type": "Str",
 							"raw": "Topic:",
 							"range": [21, 27],
 							"loc": {
@@ -259,7 +192,8 @@
 									"line": 2,
 									"column": 7
 								}
-							}
+							},
+							"value": "Topic"
 						},
 						{
 							"value": "*",
@@ -278,7 +212,7 @@
 							}
 						}
 					],
-					"type": "Marked::Strong",
+					"type": "Strong",
 					"raw": "*Topic:*",
 					"range": [20, 28],
 					"loc": {
@@ -392,41 +326,7 @@
 							}
 						},
 						{
-							"children": [
-								{
-									"value": "Severity",
-									"type": "Str",
-									"raw": "Severity",
-									"range": [51, 59],
-									"loc": {
-										"start": {
-											"line": 3,
-											"column": 1
-										},
-										"end": {
-											"line": 3,
-											"column": 9
-										}
-									}
-								},
-								{
-									"value": ":",
-									"type": "Str",
-									"raw": ":",
-									"range": [59, 60],
-									"loc": {
-										"start": {
-											"line": 3,
-											"column": 9
-										},
-										"end": {
-											"line": 3,
-											"column": 10
-										}
-									}
-								}
-							],
-							"type": "Marked::Markup",
+							"type": "Str",
 							"raw": "Severity:",
 							"range": [51, 60],
 							"loc": {
@@ -438,7 +338,8 @@
 									"line": 3,
 									"column": 10
 								}
-							}
+							},
+							"value": "Severity"
 						},
 						{
 							"value": "*",
@@ -457,7 +358,7 @@
 							}
 						}
 					],
-					"type": "Marked::Strong",
+					"type": "Strong",
 					"raw": "*Severity:*",
 					"range": [50, 61],
 					"loc": {

@@ -342,6 +342,16 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 			// biome-ignore lint/performance/noDelete: Marked::Link node have value property but textlint AST object does not.
 			delete node.value;
 		}
+		if (node.type === "Marked::Strong") {
+			node.type = ASTNodeTypes.Strong;
+			// @ts-expect-error
+			node.children[1].type = ASTNodeTypes.Str;
+			// @ts-expect-error
+			node.children[1].value = node.children[1].children[0].value;
+			// @ts-expect-error
+			// biome-ignore lint/performance/noDelete: Typst AST object requires 'children' property but textlint AST object does not.
+			delete node.children[1].children;
+		}
 
 		// @ts-expect-error
 		// biome-ignore lint/performance/noDelete: Typst AST object requires 's' property but textlint AST object does not.

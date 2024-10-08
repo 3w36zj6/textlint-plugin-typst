@@ -1,0 +1,359 @@
+{
+	"children": [
+		{
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 8
+				}
+			},
+			"range": [0, 8],
+			"raw": "*strong*",
+			"type": "Paragraph",
+			"children": [
+				{
+					"children": [
+						{
+							"value": "*",
+							"type": "Marked::Star",
+							"raw": "*",
+							"range": [0, 1],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 0
+								},
+								"end": {
+									"line": 1,
+									"column": 1
+								}
+							}
+						},
+						{
+							"type": "Str",
+							"raw": "strong",
+							"range": [1, 7],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 1
+								},
+								"end": {
+									"line": 1,
+									"column": 7
+								}
+							},
+							"value": "strong"
+						},
+						{
+							"value": "*",
+							"type": "Marked::Star",
+							"raw": "*",
+							"range": [7, 8],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 7
+								},
+								"end": {
+									"line": 1,
+									"column": 8
+								}
+							}
+						}
+					],
+					"type": "Strong",
+					"raw": "*strong*",
+					"range": [0, 8],
+					"loc": {
+						"start": {
+							"line": 1,
+							"column": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 8
+						}
+					}
+				}
+			]
+		},
+		{
+			"value": "\n\n",
+			"type": "Break",
+			"raw": "\n\n",
+			"range": [8, 10],
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 8
+				},
+				"end": {
+					"line": 3,
+					"column": 0
+				}
+			}
+		},
+		{
+			"loc": {
+				"start": {
+					"line": 3,
+					"column": 0
+				},
+				"end": {
+					"line": 4,
+					"column": 0
+				}
+			},
+			"range": [10, 20],
+			"raw": "* a b c *\n",
+			"type": "Paragraph",
+			"children": [
+				{
+					"children": [
+						{
+							"value": "*",
+							"type": "Marked::Star",
+							"raw": "*",
+							"range": [10, 11],
+							"loc": {
+								"start": {
+									"line": 3,
+									"column": 0
+								},
+								"end": {
+									"line": 3,
+									"column": 1
+								}
+							}
+						},
+						{
+							"type": "Str",
+							"raw": " a b c ",
+							"range": [11, 18],
+							"loc": {
+								"start": {
+									"line": 3,
+									"column": 1
+								},
+								"end": {
+									"line": 3,
+									"column": 8
+								}
+							},
+							"value": "a b c"
+						},
+						{
+							"value": "*",
+							"type": "Marked::Star",
+							"raw": "*",
+							"range": [18, 19],
+							"loc": {
+								"start": {
+									"line": 3,
+									"column": 8
+								},
+								"end": {
+									"line": 3,
+									"column": 9
+								}
+							}
+						}
+					],
+					"type": "Strong",
+					"raw": "* a b c *",
+					"range": [10, 19],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 0
+						},
+						"end": {
+							"line": 3,
+							"column": 9
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": "\n",
+					"value": "\n",
+					"range": [19, 20],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 9
+						},
+						"end": {
+							"line": 4,
+							"column": 0
+						}
+					}
+				}
+			]
+		},
+		{
+			"value": "\\",
+			"type": "Break",
+			"raw": "\\",
+			"range": [20, 21],
+			"loc": {
+				"start": {
+					"line": 4,
+					"column": 0
+				},
+				"end": {
+					"line": 4,
+					"column": 1
+				}
+			}
+		},
+		{
+			"loc": {
+				"start": {
+					"line": 5,
+					"column": 0
+				},
+				"end": {
+					"line": 5,
+					"column": 17
+				}
+			},
+			"range": [21, 38],
+			"raw": "This is *strong*.",
+			"type": "Paragraph",
+			"children": [
+				{
+					"value": "This is",
+					"type": "Str",
+					"raw": "This is",
+					"range": [21, 28],
+					"loc": {
+						"start": {
+							"line": 5,
+							"column": 0
+						},
+						"end": {
+							"line": 5,
+							"column": 7
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [28, 29],
+					"loc": {
+						"start": {
+							"line": 5,
+							"column": 7
+						},
+						"end": {
+							"line": 5,
+							"column": 8
+						}
+					}
+				},
+				{
+					"children": [
+						{
+							"value": "*",
+							"type": "Marked::Star",
+							"raw": "*",
+							"range": [29, 30],
+							"loc": {
+								"start": {
+									"line": 5,
+									"column": 8
+								},
+								"end": {
+									"line": 5,
+									"column": 9
+								}
+							}
+						},
+						{
+							"type": "Str",
+							"raw": "strong",
+							"range": [30, 36],
+							"loc": {
+								"start": {
+									"line": 5,
+									"column": 9
+								},
+								"end": {
+									"line": 5,
+									"column": 15
+								}
+							},
+							"value": "strong"
+						},
+						{
+							"value": "*",
+							"type": "Marked::Star",
+							"raw": "*",
+							"range": [36, 37],
+							"loc": {
+								"start": {
+									"line": 5,
+									"column": 15
+								},
+								"end": {
+									"line": 5,
+									"column": 16
+								}
+							}
+						}
+					],
+					"type": "Strong",
+					"raw": "*strong*",
+					"range": [29, 37],
+					"loc": {
+						"start": {
+							"line": 5,
+							"column": 8
+						},
+						"end": {
+							"line": 5,
+							"column": 16
+						}
+					}
+				},
+				{
+					"value": ".",
+					"type": "Str",
+					"raw": ".",
+					"range": [37, 38],
+					"loc": {
+						"start": {
+							"line": 5,
+							"column": 16
+						},
+						"end": {
+							"line": 5,
+							"column": 17
+						}
+					}
+				}
+			]
+		}
+	],
+	"type": "Document",
+	"raw": "*strong*\n\n* a b c *\n\\\nThis is *strong*.",
+	"range": [0, 39],
+	"loc": {
+		"start": {
+			"line": 1,
+			"column": 0
+		},
+		"end": {
+			"line": 5,
+			"column": 17
+		}
+	}
+}
