@@ -77,15 +77,20 @@ export const convertRawTypstAstStringToObject = (rawTypstAstString: string) => {
 export const convertTypstAstNodeTypeToTextlintNodeType = (
 	typstAstNodeType: string,
 ): string => {
-	// TODO: Add more mappings
-	const nodeTypeMap: { [key: string]: string } = {
-		"Marked::Heading": ASTNodeTypes.Header,
-		"Marked::Text": ASTNodeTypes.Str,
-		"Marked::Parbreak": ASTNodeTypes.Break,
-	};
-	return typstAstNodeType in nodeTypeMap
-		? nodeTypeMap[typstAstNodeType]
-		: typstAstNodeType;
+	const nodeTypeMap = new Map<RegExp, string>([
+		[/^Marked::Heading/, ASTNodeTypes.Header],
+		[/^Marked::Text/, ASTNodeTypes.Str],
+		[/^Marked::Parbreak/, ASTNodeTypes.Break],
+		[/^Escape::Linebreak/, ASTNodeTypes.Break],
+	]);
+
+	for (const [pattern, nodeType] of nodeTypeMap) {
+		if (pattern.test(typstAstNodeType)) {
+			return nodeType;
+		}
+	}
+
+	return typstAstNodeType;
 };
 
 interface TypstAstNode {
