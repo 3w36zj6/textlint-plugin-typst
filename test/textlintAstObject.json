@@ -571,7 +571,7 @@
 			"children": [
 				{
 					"value": "=",
-					"type": "Header",
+					"type": "Marked::HeadingMarker",
 					"raw": "=",
 					"range": [68, 69],
 					"loc": {

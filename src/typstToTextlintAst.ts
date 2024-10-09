@@ -78,7 +78,7 @@ export const convertTypstAstNodeTypeToTextlintNodeType = (
 	typstAstNodeType: string,
 ): string => {
 	const nodeTypeMap = new Map<RegExp, string>([
-		[/^Marked::Heading/, ASTNodeTypes.Header],
+		[/^Marked::Heading$/, ASTNodeTypes.Header],
 		[/^Marked::Text/, ASTNodeTypes.Str],
 		[/^Marked::Parbreak/, ASTNodeTypes.Break],
 		[/^Escape::Linebreak/, ASTNodeTypes.Break],

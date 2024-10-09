@@ -1,0 +1,295 @@
+{
+	"children": [
+		{
+			"children": [
+				{
+					"value": "=",
+					"type": "Marked::HeadingMarker",
+					"raw": "=",
+					"range": [0, 1],
+					"loc": {
+						"start": {
+							"line": 1,
+							"column": 0
+						},
+						"end": {
+							"line": 1,
+							"column": 1
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [1, 2],
+					"loc": {
+						"start": {
+							"line": 1,
+							"column": 1
+						},
+						"end": {
+							"line": 1,
+							"column": 2
+						}
+					}
+				},
+				{
+					"children": [
+						{
+							"value": "header 1",
+							"type": "Str",
+							"raw": "header 1",
+							"range": [2, 10],
+							"loc": {
+								"start": {
+									"line": 1,
+									"column": 2
+								},
+								"end": {
+									"line": 1,
+									"column": 10
+								}
+							}
+						}
+					],
+					"type": "Marked::Markup",
+					"raw": "header 1",
+					"range": [2, 10],
+					"loc": {
+						"start": {
+							"line": 1,
+							"column": 2
+						},
+						"end": {
+							"line": 1,
+							"column": 10
+						}
+					}
+				}
+			],
+			"type": "Header",
+			"raw": "= header 1",
+			"range": [0, 10],
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 0
+				},
+				"end": {
+					"line": 1,
+					"column": 10
+				}
+			}
+		},
+		{
+			"value": "\n\n",
+			"type": "Break",
+			"raw": "\n\n",
+			"range": [10, 12],
+			"loc": {
+				"start": {
+					"line": 1,
+					"column": 10
+				},
+				"end": {
+					"line": 3,
+					"column": 0
+				}
+			}
+		},
+		{
+			"children": [
+				{
+					"value": "==",
+					"type": "Marked::HeadingMarker",
+					"raw": "==",
+					"range": [12, 14],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 0
+						},
+						"end": {
+							"line": 3,
+							"column": 2
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [14, 15],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 2
+						},
+						"end": {
+							"line": 3,
+							"column": 3
+						}
+					}
+				},
+				{
+					"children": [
+						{
+							"value": "header 2",
+							"type": "Str",
+							"raw": "header 2",
+							"range": [15, 23],
+							"loc": {
+								"start": {
+									"line": 3,
+									"column": 3
+								},
+								"end": {
+									"line": 3,
+									"column": 11
+								}
+							}
+						}
+					],
+					"type": "Marked::Markup",
+					"raw": "header 2",
+					"range": [15, 23],
+					"loc": {
+						"start": {
+							"line": 3,
+							"column": 3
+						},
+						"end": {
+							"line": 3,
+							"column": 11
+						}
+					}
+				}
+			],
+			"type": "Header",
+			"raw": "== header 2",
+			"range": [12, 23],
+			"loc": {
+				"start": {
+					"line": 3,
+					"column": 0
+				},
+				"end": {
+					"line": 3,
+					"column": 11
+				}
+			}
+		},
+		{
+			"value": "\n\n",
+			"type": "Break",
+			"raw": "\n\n",
+			"range": [23, 25],
+			"loc": {
+				"start": {
+					"line": 3,
+					"column": 11
+				},
+				"end": {
+					"line": 5,
+					"column": 0
+				}
+			}
+		},
+		{
+			"children": [
+				{
+					"value": "===",
+					"type": "Marked::HeadingMarker",
+					"raw": "===",
+					"range": [25, 28],
+					"loc": {
+						"start": {
+							"line": 5,
+							"column": 0
+						},
+						"end": {
+							"line": 5,
+							"column": 3
+						}
+					}
+				},
+				{
+					"type": "Str",
+					"raw": " ",
+					"value": " ",
+					"range": [28, 29],
+					"loc": {
+						"start": {
+							"line": 5,
+							"column": 3
+						},
+						"end": {
+							"line": 5,
+							"column": 4
+						}
+					}
+				},
+				{
+					"children": [
+						{
+							"value": "header 3",
+							"type": "Str",
+							"raw": "header 3",
+							"range": [29, 37],
+							"loc": {
+								"start": {
+									"line": 5,
+									"column": 4
+								},
+								"end": {
+									"line": 5,
+									"column": 12
+								}
+							}
+						}
+					],
+					"type": "Marked::Markup",
+					"raw": "header 3",
+					"range": [29, 37],
+					"loc": {
+						"start": {
+							"line": 5,
+							"column": 4
+						},
+						"end": {
+							"line": 5,
+							"column": 12
+						}
+					}
+				}
+			],
+			"type": "Header",
+			"raw": "=== header 3",
+			"range": [25, 37],
+			"loc": {
+				"start": {
+					"line": 5,
+					"column": 0
+				},
+				"end": {
+					"line": 5,
+					"column": 12
+				}
+			}
+		}
+	],
+	"type": "Document",
+	"raw": "= header 1\n\n== header 2\n\n=== header 3",
+	"range": [0, 37],
+	"loc": {
+		"start": {
+			"line": 1,
+			"column": 0
+		},
+		"end": {
+			"line": 5,
+			"column": 12
+		}
+	}
+}
