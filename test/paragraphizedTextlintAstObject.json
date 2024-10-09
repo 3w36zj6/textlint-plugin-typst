@@ -571,7 +571,7 @@
 			"children": [
 				{
 					"value": "=",
-					"type": "Marked::HeadingMarker",
+					"type": "Header",
 					"raw": "=",
 					"range": [68, 69],
 					"loc": {
@@ -1380,41 +1380,7 @@
 							}
 						},
 						{
-							"children": [
-								{
-									"value": "closed form",
-									"type": "Str",
-									"raw": "closed form",
-									"range": [211, 222],
-									"loc": {
-										"start": {
-											"line": 7,
-											"column": 29
-										},
-										"end": {
-											"line": 7,
-											"column": 40
-										}
-									}
-								},
-								{
-									"value": ":",
-									"type": "Str",
-									"raw": ":",
-									"range": [222, 223],
-									"loc": {
-										"start": {
-											"line": 7,
-											"column": 40
-										},
-										"end": {
-											"line": 7,
-											"column": 41
-										}
-									}
-								}
-							],
-							"type": "Marked::Markup",
+							"type": "Str",
 							"raw": "closed form:",
 							"range": [211, 223],
 							"loc": {
@@ -1426,7 +1392,8 @@
 									"line": 7,
 									"column": 41
 								}
-							}
+							},
+							"value": "closed form"
 						},
 						{
 							"value": "_",
@@ -1445,7 +1412,7 @@
 							}
 						}
 					],
-					"type": "Marked::Emph",
+					"type": "Emphasis",
 					"raw": "_closed form:_",
 					"range": [210, 224],
 					"loc": {
