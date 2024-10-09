@@ -5651,8 +5651,8 @@
 			}
 		},
 		{
-			"value": "// https://github.com/typst/typst/blob/main/README.md",
-			"type": "Ct::LineComment",
+			"value": "https://github.com/typst/typst/blob/main/README.md",
+			"type": "Comment",
 			"raw": "// https://github.com/typst/typst/blob/main/README.md",
 			"range": [571, 624],
 			"loc": {

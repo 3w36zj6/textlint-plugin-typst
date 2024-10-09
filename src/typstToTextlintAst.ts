@@ -362,6 +362,14 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 			// biome-ignore lint/performance/noDelete: Typst AST object requires 'children' property but textlint AST object does not.
 			delete node.children[1].children;
 		}
+		if (node.type === "Ct::LineComment") {
+			node.type = ASTNodeTypes.Comment;
+			node.value = node.raw.replace(/^\/\/\s*/, "");
+		}
+		if (node.type === "Ct::BlockComment") {
+			node.type = ASTNodeTypes.Comment;
+			node.value = node.raw.replace(/^\/\*\s*/, "").replace(/\s*\*\/$/, "");
+		}
 
 		// @ts-expect-error
 		// biome-ignore lint/performance/noDelete: Typst AST object requires 's' property but textlint AST object does not.
