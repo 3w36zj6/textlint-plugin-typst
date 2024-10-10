@@ -21,7 +21,8 @@
 		"lint:apply": "biome lint --apply .",
 		"check": "biome check .",
 		"check:write": "biome check --write .",
-		"test": "vitest"
+		"test": "vitest",
+		"update-fixtures": "bun ./test/update-fixtures.ts && biome check --write ./test/fixtures"
 	},
 	"dependencies": {
 		"@myriaddreamin/typst-ts-web-compiler": "^0.5.0-rc7",
