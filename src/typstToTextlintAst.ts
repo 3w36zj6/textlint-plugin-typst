@@ -69,30 +69,6 @@ export const convertRawTypstAstStringToObject = (rawTypstAstString: string) => {
 	return parsed.ast as TypstAstNode;
 };
 
-/**
- * Convert a Typst AST node type to a textlint AST node type.
- * @param typstAstNodeType The Typst AST node type.
- * @returns The textlint AST node type.
- **/
-export const convertTypstAstNodeTypeToTextlintNodeType = (
-	typstAstNodeType: string,
-): string => {
-	const nodeTypeMap = new Map<RegExp, string>([
-		[/^Marked::Heading$/, ASTNodeTypes.Header],
-		[/^Marked::Text/, ASTNodeTypes.Str],
-		[/^Marked::Parbreak/, ASTNodeTypes.Break],
-		[/^Escape::Linebreak/, ASTNodeTypes.Break],
-	]);
-
-	for (const [pattern, nodeType] of nodeTypeMap) {
-		if (pattern.test(typstAstNodeType)) {
-			return nodeType;
-		}
-	}
-
-	return typstAstNodeType;
-};
-
 interface TypstAstNode {
 	s: string;
 	c?: TypstAstNode[];
@@ -296,13 +272,22 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 
 		const endOffset = currentOffset + nodeLength;
 
-		node.type = convertTypstAstNodeTypeToTextlintNodeType(
-			extractNodeType(node.s),
-		);
 		node.raw = extractRawSourceByLocation(typstSource, location);
 		node.range = [startOffset, endOffset];
 		node.loc = location;
-
+		node.type = extractNodeType(node.s);
+		if (/^Marked::Heading$/.test(node.type)) {
+			node.type = ASTNodeTypes.Header;
+		}
+		if (/^Marked::Text/.test(node.type)) {
+			node.type = ASTNodeTypes.Str;
+		}
+		if (/^Marked::Parbreak/.test(node.type)) {
+			node.type = ASTNodeTypes.Break;
+		}
+		if (/^Escape::Linebreak/.test(node.type)) {
+			node.type = ASTNodeTypes.Break;
+		}
 		if (node.type === "Marked::Raw") {
 			if (node.loc.start.line === node.loc.end.line) {
 				// If Code
