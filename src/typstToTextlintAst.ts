@@ -307,7 +307,13 @@ export const convertRawTypstAstObjectToTextlintAstObject = (
 			if (node.loc.start.line === node.loc.end.line) {
 				// If Code
 				node.type = ASTNodeTypes.Code;
-				node.value = node.raw.replace(/`([\s\S]*?)`/, "$1");
+				if (/^```([\s\S]*?)```$/.test(node.raw)) {
+					const codeBlockPattern = /^```(\w+)?\s([\s\S]*?)\s*```$/;
+					const match = node.raw.match(codeBlockPattern);
+					node.value = match ? match[2].trim() : "";
+				} else {
+					node.value = node.raw.replace(/`([\s\S]*?)`/, "$1");
+				}
 			} else {
 				// If CodeBlock
 				node.type = ASTNodeTypes.CodeBlock;
